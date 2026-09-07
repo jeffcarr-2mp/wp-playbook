@@ -58,6 +58,17 @@
   .frame{position:relative; aspect-ratio:16/9; background:#000}
   .frame iframe,.frame > div{position:absolute; inset:0; width:100%; height:100%}
   .frame .empty{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#B3C1DB; font-family:var(--head); text-transform:uppercase; letter-spacing:.1em; font-size:14px; text-align:center; padding:20px}
+  /* our layer over the YouTube iframe: taps toggle play/pause; when paused we cover YouTube's own overlays */
+  .frame .shield{position:absolute; inset:0; z-index:2; cursor:pointer; display:none; background:transparent}
+  .frame .shield.on{display:block}
+  .frame .shield .pp{position:absolute; inset:0; display:none; align-items:center; justify-content:center; flex-direction:column; gap:10px; background:#0A1226; color:#E9EEF8; font-family:var(--head); text-transform:uppercase; letter-spacing:.08em; text-align:center; padding:20px}
+  .frame .shield.paused .pp{display:flex}
+  .frame .shield .pp .big{width:64px; height:64px; border-radius:50%; background:#7FA1E8; color:#0A1226; display:flex; align-items:center; justify-content:center; font-size:28px}
+  .frame .shield .pp .t{font-size:14px; max-width:90%}
+  .frame .shield .pp .s{font-size:12px; color:#B3C1DB; letter-spacing:.04em; text-transform:none; font-family:var(--body)}
+  .frame .bar{position:absolute; left:0; right:0; bottom:0; height:3px; background:#ffffff33; z-index:3; display:none}
+  .frame .bar i{display:block; height:100%; width:0; background:#7FA1E8}
+  .frame .bar.on{display:block}
   .now{padding:12px 14px}
   .now .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:8px}
   .now .src{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-family:var(--head)}
@@ -127,7 +138,9 @@
 <div class="wrap" id="wrap">
   <div class="side">
     <div class="player">
-      <div class="frame"><div id="yt"></div><div class="empty" id="ytEmpty">Tap a drill to play it here</div></div>
+      <div class="frame"><div id="yt"></div><div class="empty" id="ytEmpty">Tap a drill to play it here</div>
+        <div class="shield" id="shield"><div class="pp"><div class="big" id="ppIcon">▶</div><div class="t" id="ppTitle"></div><div class="s" id="ppSub">tap to play</div></div></div>
+        <div class="bar" id="bar"><i id="barFill"></i></div></div>
       <div class="now" id="now"><span class="muted small">Clips play from their start to their end and stop. Loop to watch a movement repeatedly.</span></div>
     </div>
   </div>
@@ -183,21 +196,34 @@ function playClip(id){ const c=clip(id); if(!c) return; cur=id; renderNow(); hig
   if(!ytReady && !ensureYT()){ pendingClip=id; return; }
   pendingClip=null; $('#ytEmpty').style.display='none';
   const opts={videoId:v.youtubeId, startSeconds:c.start, endSeconds:c.end};
-  if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:{rel:0, modestbranding:1, playsinline:1, start:c.start, end:c.end}, videoId:v.youtubeId,
-      events:{onReady:()=>{ yt.loadVideoById(opts); }, onStateChange:e=>{ if(e.data===0){ if(loop&&cur) yt.loadVideoById({videoId:video(clip(cur).videoId).youtubeId, startSeconds:clip(cur).start, endSeconds:clip(cur).end}); else renderNow(true); } }}}); }
+  if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:PV, videoId:v.youtubeId,
+      events:{onReady:()=>{ yt.loadVideoById(opts); }, onStateChange:onState}}); }
   else yt.loadVideoById(opts);
+  shieldState('loading');
   if(location.hash!=='#clip='+id && !location.hash.startsWith('#coach')) history.replaceState(null,'', '#clip='+id+(view!=='today'?'&v='+view:''));
 }
 window.PB={ play:playClip };
 PB.toggleLoop=()=>{ loop=!loop; renderNow(); };
 PB.replay=()=>{ if(cur) playClip(cur); };
 PB.share=async()=>{ const url=location.origin+location.pathname+'#clip='+cur; try{ if(navigator.share) await navigator.share({title:clip(cur).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
+const PV={rel:0, playsinline:1, controls:0, disablekb:1, iv_load_policy:3, fs:0, modestbranding:1};
+// YouTube state → our shield. 1 playing, 2 paused, 0 ended, 3 buffering, -1 unstarted, 5 cued
+function onState(e){ if(e.data===1) shieldState('playing');
+  else if(e.data===2) shieldState('paused');
+  else if(e.data===0){ if(loop&&cur){ const c=clip(cur); yt.loadVideoById({videoId:video(c.videoId).youtubeId, startSeconds:c.start, endSeconds:c.end}); } else { shieldState('ended'); renderNow(true); } }
+  else if(e.data===3||e.data===-1||e.data===5) shieldState('loading'); }
+function shieldState(st){ const sh=$('#shield'); sh.classList.add('on'); sh.classList.toggle('paused', st==='paused'||st==='ended');
+  const c=cur?clip(cur):null; $('#ppTitle').textContent=c?c.title:(PB._rawTitle||''); $('#ppIcon').textContent=st==='ended'?'↺':'▶'; $('#ppSub').textContent=st==='ended'?(c?'tap to watch again':'tap to replay'):'tap to play';
+  $('#bar').classList.toggle('on', st==='playing'||st==='paused'); if(st==='playing') tickBar(); }
+let barT=null; function tickBar(){ clearTimeout(barT); try{ const c=cur?clip(cur):null; if(!yt||!c) return; const t=yt.getCurrentTime(); const pct=Math.min(100,Math.max(0,(t-c.start)/(c.end-c.start)*100)); $('#barFill').style.width=pct+'%'; if(yt.getPlayerState()===1) barT=setTimeout(tickBar,250); }catch(e){} }
+document.addEventListener('DOMContentLoaded',()=>{ $('#shield').addEventListener('click',()=>{ if(!yt) return; try{ const st=yt.getPlayerState(); if(st===0){ if(cur) playClip(cur); else yt.playVideo(); } else if(st===1) yt.pauseVideo(); else yt.playVideo(); }catch(e){} }); });
+PB.playPause=()=>$('#shield').click();
 function renderNow(ended){ const box=$('#now'); if(!cur){ box.innerHTML='<span class="muted small">Tap a drill to play it here.</span>'; return; }
   const c=clip(cur), v=video(c.videoId), s=v&&source(v.sourceId);
   box.innerHTML=`<div class="src">${esc(s?s.title:'')} · ${esc(v?v.title:'')}</div>
     <h3 style="margin-top:4px">${esc(c.title)}</h3>
     <div class="row"><span class="mono small muted">${mmss(c.start)}–${mmss(c.end)} · ${mmss(c.end-c.start)}${c.endEstimated?' <span class="warn">(end estimated)</span>':''}</span>
-      <button class="${loop?'pri':''}" onclick="PB.toggleLoop()">${loop?'Looping':'Loop'}</button><button onclick="PB.replay()">${ended?'Replay':'Restart'}</button><button onclick="PB.share()">Share</button>
+      <button onclick="PB.playPause()">Play / Pause</button><button class="${loop?'pri':''}" onclick="PB.toggleLoop()">${loop?'Looping':'Loop'}</button><button onclick="PB.replay()">${ended?'Replay':'Restart'}</button><button onclick="PB.share()">Share</button>
       <a class="small" href="https://www.youtube.com/watch?v=${esc(v?v.youtubeId:'')}&t=${c.start}" target="_blank" rel="noopener">YouTube ↗</a></div>
     ${c.cues&&c.cues.length?`<ul class="cues">${c.cues.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
     ${c.notes?`<div class="notes"><div class="eyebrow">How we use it</div>${md(c.notes)}</div>`:''}
@@ -255,9 +281,9 @@ function practiceHtml(p,isToday){ const total=p.blocks.reduce((a,b)=>a+(+b.minut
 PB.sharePractice=async id=>{ const url=location.origin+location.pathname+'#practice='+id; try{ if(navigator.share) await navigator.share({title:byId(D.practices,id).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
 // raw YouTube (a coach's own unlisted video in a practice block)
 PB.playRaw=(ytId,start,end,title)=>{ cur=null; $('#ytEmpty').style.display='none'; const opts={videoId:ytId,startSeconds:start||0}; if(end) opts.endSeconds=end;
-  if(!ytReady && !ensureYT()){ pendingRaw=opts; return; } if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:{rel:0,playsinline:1}, videoId:ytId, events:{onReady:()=>yt.loadVideoById(opts)}}); } else yt.loadVideoById(opts);
-  $('#now').innerHTML=`<div class="src">Our video</div><h3>${esc(title||'')}</h3>`; };
-let pendingRaw=null; const _r=window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady=function(){ _r(); if(pendingRaw){ const o=pendingRaw; pendingRaw=null; if(!yt) yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com',playerVars:{rel:0,playsinline:1},videoId:o.videoId,events:{onReady:()=>yt.loadVideoById(o)}}); else yt.loadVideoById(o); } };
+  if(!ytReady && !ensureYT()){ pendingRaw=opts; return; } PB._rawTitle=title||''; if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:PV, videoId:ytId, events:{onReady:()=>yt.loadVideoById(opts), onStateChange:onState}}); } else yt.loadVideoById(opts);
+  shieldState('loading'); $('#now').innerHTML=`<div class="src">Our video</div><h3>${esc(title||'')}</h3><div class="row"><button onclick="PB.playPause()">Play / Pause</button><span class="small muted">Scrub with the clipper's Set start / Set end while it plays.</span></div>`; };
+let pendingRaw=null; const _r=window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady=function(){ _r(); if(pendingRaw){ const o=pendingRaw; pendingRaw=null; if(!yt) yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com',playerVars:PV,videoId:o.videoId,events:{onReady:()=>yt.loadVideoById(o),onStateChange:onState}}); else yt.loadVideoById(o); } };
 
 // ---------- coach mode ----------
 PB.setCoach=on=>{ coach=on; $('#coachbar').classList.toggle('on',on); $('#wrap').classList.toggle('wide',on); render(); renderNow(); markDraft(); };
