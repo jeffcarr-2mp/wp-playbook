@@ -206,13 +206,16 @@ window.PB={ play:playClip };
 PB.toggleLoop=()=>{ loop=!loop; renderNow(); };
 PB.replay=()=>{ if(cur) playClip(cur); };
 PB.share=async()=>{ const url=location.origin+location.pathname+'#clip='+cur; try{ if(navigator.share) await navigator.share({title:clip(cur).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
-const PV={rel:0, playsinline:1, controls:0, disablekb:1, iv_load_policy:3, fs:0, modestbranding:1};
+// YouTube's own controls stay ON so the very first tap lands inside the iframe (iOS refuses API play before that).
+// After the first play our shield takes over: taps pause/resume through the API and our panel covers YouTube's paused overlays.
+const PV={rel:0, playsinline:1, iv_load_policy:3, fs:0, modestbranding:1};
+let played=false;
 // YouTube state → our shield. 1 playing, 2 paused, 0 ended, 3 buffering, -1 unstarted, 5 cued
 function onState(e){ if(e.data===1) shieldState('playing');
   else if(e.data===2) shieldState('paused');
   else if(e.data===0){ if(loop&&cur){ const c=clip(cur); yt.loadVideoById({videoId:video(c.videoId).youtubeId, startSeconds:c.start, endSeconds:c.end}); } else { shieldState('ended'); renderNow(true); } }
   else if(e.data===3||e.data===-1||e.data===5) shieldState('loading'); }
-function shieldState(st){ const sh=$('#shield'); sh.classList.add('on'); sh.classList.toggle('paused', st==='paused'||st==='ended');
+function shieldState(st){ const sh=$('#shield'); if(st==='playing') played=true; if(st==='loading'&&!played){ sh.classList.remove('on'); return; } sh.classList.toggle('on', played||st==='ended'); sh.classList.toggle('paused', st==='paused'||st==='ended');
   const c=cur?clip(cur):null; $('#ppTitle').textContent=c?c.title:(PB._rawTitle||''); $('#ppIcon').textContent=st==='ended'?'↺':'▶'; $('#ppSub').textContent=st==='ended'?(c?'tap to watch again':'tap to replay'):'tap to play';
   $('#bar').classList.toggle('on', st==='playing'||st==='paused'); if(st==='playing') tickBar(); }
 let barT=null; function tickBar(){ clearTimeout(barT); try{ const c=cur?clip(cur):null; if(!yt||!c) return; const t=yt.getCurrentTime(); const pct=Math.min(100,Math.max(0,(t-c.start)/(c.end-c.start)*100)); $('#barFill').style.width=pct+'%'; if(yt.getPlayerState()===1) barT=setTimeout(tickBar,250); }catch(e){} }
