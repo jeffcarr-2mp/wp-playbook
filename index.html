@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ST X Playbook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Playbook">
+<meta name="theme-color" content="#003087">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --home:#003087; --home-soft:#E1E7F3; --away:#6E7373; --away-soft:#ECEEEE; --flag:#4F6391; --flag-soft:#E6EBF5;
+    --ground:#F2F4F8; --surface:#FFFFFF; --surface-2:#F5F7FB; --ink:#0B1E45; --ink-2:#33456B; --muted:#6B7A94; --line:#B3C1DB; --line-soft:#DCE3EF;
+    --warn:#8A6A12; --warn-soft:#FBF3D9;
+    --head:"Oswald","Arial Narrow",Arial,sans-serif; --body:"Source Serif 4",Georgia,serif; --mono:"IBM Plex Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --home:#7FA1E8; --home-soft:#16305F; --away:#B8BCBC; --away-soft:#2A3038; --flag:#B3C1DB; --flag-soft:#223055;
+    --ground:#0A1226; --surface:#101C3A; --surface-2:#15244A; --ink:#E9EEF8; --ink-2:#B7C4DE; --muted:#8E9DBB; --line:#2A3C66; --line-soft:#1E2E52;
+    --warn:#E0B85A; --warn-soft:#2B2410; } }
+  :root[data-theme="dark"]{
+    --home:#7FA1E8; --home-soft:#16305F; --away:#B8BCBC; --away-soft:#2A3038; --flag:#B3C1DB; --flag-soft:#223055;
+    --ground:#0A1226; --surface:#101C3A; --surface-2:#15244A; --ink:#E9EEF8; --ink-2:#B7C4DE; --muted:#8E9DBB; --line:#2A3C66; --line-soft:#1E2E52;
+    --warn:#E0B85A; --warn-soft:#2B2410; }
+  *{box-sizing:border-box}
+  html,body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--body); font-size:16px; line-height:1.5}
+  a{color:var(--home)}
+  button{font:inherit; cursor:pointer; border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:8px; padding:6px 12px}
+  button:hover{border-color:var(--home)} button:focus-visible{outline:2px solid var(--home); outline-offset:2px}
+  button.pri{background:var(--home); color:#fff; border-color:var(--home)} button.pri:hover{filter:brightness(1.1)}
+  button.ghost{background:transparent}
+  input,textarea,select{font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:6px 10px}
+  textarea{width:100%; min-height:80px; font-size:14px; line-height:1.4}
+  h1,h2,h3,h4{font-family:var(--head); text-transform:uppercase; letter-spacing:.04em; margin:0; text-wrap:balance; font-weight:600}
+  h1{font-size:20px} h2{font-size:18px; color:var(--home)} h3{font-size:15px} h4{font-size:13px; color:var(--muted); letter-spacing:.08em}
+  .mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+  .muted{color:var(--muted)} .small{font-size:13px}
+  /* top bar */
+  .top{position:sticky; top:0; z-index:5; background:var(--surface); border-bottom:1px solid var(--line); padding:8px 14px calc(0px + env(safe-area-inset-top)); padding-top:calc(8px + env(safe-area-inset-top)); display:flex; align-items:center; gap:12px}
+  .top img{height:32px; width:32px; border-radius:6px; background:#fff}
+  .top h1{color:var(--home)} .top h1 span{color:var(--muted); font-weight:500}
+  nav{display:flex; gap:2px; margin-left:auto}
+  nav button{border:0; background:transparent; padding:8px 12px; font-family:var(--head); text-transform:uppercase; letter-spacing:.06em; font-size:14px; color:var(--muted); border-radius:6px}
+  nav button.on{color:var(--home); background:var(--home-soft)}
+  .coachbar{background:var(--warn-soft); color:var(--warn); border-bottom:1px solid var(--line); padding:6px 14px; font-size:13px; display:none; gap:10px; align-items:center; flex-wrap:wrap}
+  .coachbar.on{display:flex}
+  .coachbar button{padding:4px 10px; font-size:13px}
+  /* layout */
+  .wrap{max-width:1180px; margin:0 auto; padding:14px; display:grid; gap:16px; grid-template-columns:1fr}
+  @media (min-width:960px){ .wrap{grid-template-columns:minmax(0,1fr) 380px} .wrap.wide{grid-template-columns:minmax(0,1fr) 440px} .side{position:sticky; top:72px; align-self:start} .main{order:-1} }
+  /* player */
+  .player{background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+  .frame{position:relative; aspect-ratio:16/9; background:#000}
+  .frame iframe,.frame > div{position:absolute; inset:0; width:100%; height:100%}
+  .frame .empty{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#B3C1DB; font-family:var(--head); text-transform:uppercase; letter-spacing:.1em; font-size:14px; text-align:center; padding:20px}
+  .now{padding:12px 14px}
+  .now .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:8px}
+  .now .src{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-family:var(--head)}
+  .cues{margin:8px 0 0; padding-left:18px; font-size:14px} .cues li{margin:3px 0}
+  .notes{font-size:14px; border-left:3px solid var(--home); padding:4px 10px; margin-top:8px; background:var(--surface-2); border-radius:0 6px 6px 0}
+  .notes p{margin:4px 0}
+  .chips{display:flex; gap:6px; flex-wrap:wrap}
+  .chip{font-family:var(--mono); font-size:11px; padding:2px 8px; border-radius:999px; background:var(--flag-soft); color:var(--flag); border:1px solid transparent}
+  .chip.lvl{background:var(--home-soft); color:var(--home)}
+  .chip.type{background:var(--away-soft); color:var(--away)}
+  button.chip{cursor:pointer} button.chip.on{border-color:var(--home); color:var(--home)}
+  /* cards */
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px; margin-bottom:14px}
+  .card > h2{margin-bottom:4px}
+  .desc{color:var(--ink-2); font-size:15px; margin:4px 0 10px}
+  .clip{display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center; padding:8px 6px; border-top:1px solid var(--line-soft); cursor:pointer}
+  .clip:first-of-type{border-top:0}
+  .clip:hover{background:var(--surface-2)} .clip.playing{background:var(--home-soft)}
+  .clip .n{font-family:var(--head); color:var(--muted); font-size:13px; width:22px; text-align:right}
+  .clip .t{font-weight:600; font-size:15px} .clip .m{font-size:12px; color:var(--muted)}
+  .clip .dur{font-family:var(--mono); font-size:12px; color:var(--muted)}
+  .clip .est{color:var(--warn)}
+  .filters{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:12px}
+  .filters input{flex:1; min-width:180px}
+  .block{border-top:1px solid var(--line-soft); padding:12px 0}
+  .block:first-of-type{border-top:0; padding-top:4px}
+  .block h3{display:flex; gap:10px; align-items:baseline} .block h3 .min{font-family:var(--mono); color:var(--muted); font-size:12px; font-weight:400; text-transform:none; letter-spacing:0}
+  .block p{margin:6px 0; font-size:15px}
+  .block img,.now img{max-width:100%; border-radius:8px; border:1px solid var(--line); margin-top:8px}
+  .eyebrow{font-family:var(--head); text-transform:uppercase; letter-spacing:.1em; font-size:12px; color:var(--muted)}
+  .kicker{display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap}
+  .plist .p{display:flex; gap:12px; align-items:baseline; padding:10px 6px; border-top:1px solid var(--line-soft); cursor:pointer}
+  .plist .p:hover{background:var(--surface-2)}
+  .plist .d{font-family:var(--mono); color:var(--muted); font-size:13px}
+  .empty{color:var(--muted); padding:20px; text-align:center}
+  /* coach edit */
+  .ed{background:var(--surface-2); border:1px dashed var(--line); border-radius:8px; padding:10px; margin:6px 0 10px; font-size:14px; display:grid; gap:8px}
+  .ed label{display:flex; flex-direction:column; gap:3px; font-size:12px; color:var(--muted)}
+  .ed .r{display:flex; gap:8px; flex-wrap:wrap; align-items:end}
+  .ed .r label{flex:1}
+  .ed .tagpick{display:flex; gap:4px; flex-wrap:wrap}
+  .ed .tagpick .grp{font-size:10px; color:var(--muted); width:100%; text-transform:uppercase; letter-spacing:.08em; margin-top:4px}
+  .mv{display:inline-flex; gap:2px} .mv button{padding:2px 7px; font-size:12px}
+  .pick{max-height:220px; overflow:auto; border:1px solid var(--line); border-radius:8px; background:var(--surface)}
+  .pick div{padding:5px 8px; cursor:pointer; font-size:13px; border-top:1px solid var(--line-soft)} .pick div:hover{background:var(--home-soft)}
+  .warn{color:var(--warn)}
+  footer{max-width:1180px; margin:0 auto; padding:20px 14px 40px; color:var(--muted); font-size:12px}
+  @media (prefers-reduced-motion:no-preference){ .clip,.card{transition:background .15s} }
+</style>
+</head>
+<body>
+<div class="top">
+  <img id="brandmark" alt="St. Xavier" src="icon-180.png" onerror="this.style.display='none'">
+  <h1>ST X <span>Playbook</span></h1>
+  <nav id="nav">
+    <button data-v="today">Today</button><button data-v="library">Library</button><button data-v="practices">Practices</button><button data-v="search">Search</button>
+  </nav>
+</div>
+<div class="coachbar" id="coachbar">
+  <b>Coach mode</b> <span id="draftState">no unsaved changes</span>
+  <button onclick="PB.newPractice()">+ Practice</button><button onclick="PB.newGroup()">+ Group</button><button onclick="PB.clipper()">✂ Clip from YouTube</button>
+  <button class="pri" onclick="PB.exportOverrides()">Download overrides.json</button>
+  <button onclick="PB.discardDraft()">Discard draft</button>
+  <button class="ghost" onclick="location.hash=''; PB.setCoach(false)">Exit</button>
+</div>
+
+<div class="wrap" id="wrap">
+  <div class="side">
+    <div class="player">
+      <div class="frame"><div id="yt"></div><div class="empty" id="ytEmpty">Tap a drill to play it here</div></div>
+      <div class="now" id="now"><span class="muted small">Clips play from their start to their end and stop. Loop to watch a movement repeatedly.</span></div>
+    </div>
+  </div>
+  <div class="main" id="main"></div>
+</div>
+<footer>St. Xavier Water Polo · instructional clips are embedded from their owners' YouTube channels and never re-hosted · <span id="updated"></span></footer>
+
+<script>
+(function(){
+'use strict';
+const $=(s,r)=>(r||document).querySelector(s), $$=(s,r)=>[...(r||document).querySelectorAll(s)];
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const mmss=s=>{s=Math.max(0,Math.round(s)); const m=Math.floor(s/60), r=s%60; return (s>=3600?Math.floor(m/60)+':'+String(m%60).padStart(2,'0'):m)+':'+String(r).padStart(2,'0');};
+const parseTime=t=>{ if(typeof t==='number') return t; const p=String(t).trim().split(':').map(Number); if(p.some(isNaN)) return NaN; return p.reduce((a,b)=>a*60+b,0); };
+// tiny markdown: paragraphs, **b**, *i*, `c`, - lists, [t](u), line breaks
+function md(src){ if(!src) return ''; const lines=esc(src).split('\n'); let out='', list=false;
+  const inl=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>').replace(/`(.+?)`/g,'<code>$1</code>').replace(/\[(.+?)\]\((https?:[^\s)]+|#[^\s)]+)\)/g,'<a href="$2">$1</a>');
+  for(const l of lines){ if(/^\s*[-*] /.test(l)){ if(!list){out+='<ul>'; list=true;} out+='<li>'+inl(l.replace(/^\s*[-*] /,''))+'</li>'; continue; } if(list){out+='</ul>'; list=false;} if(!l.trim()){continue;} out+='<p>'+inl(l)+'</p>'; }
+  if(list) out+='</ul>'; return out; }
+
+// ---------- state ----------
+let D=null;              // playbook data (base + draft applied)
+let BASE=null;           // as fetched
+let coach=false, view='today', cur=null, loop=false, level='all', tagFilter=null, q='';
+const DRAFT_KEY='wppb_draft_v1';
+const byId=(arr,id)=>arr.find(x=>x.id===id);
+const clip=id=>byId(D.clips,id); const video=id=>byId(D.videos,id); const source=id=>byId(D.sources,id);
+const visibleClips=()=>D.clips.filter(c=>!c.hidden||coach);
+const allTags=()=>Object.values(D.tags).flat();
+const lvlOf=c=>c.tags.find(t=>D.tags.level&&D.tags.level.includes(t))||'all';
+const typeOf=c=>c.tags.find(t=>D.tags['clip-type']&&D.tags['clip-type'].includes(t));
+const today=()=>new Date().toISOString().slice(0,10);
+
+function loadDraft(){ try{ const d=JSON.parse(localStorage.getItem(DRAFT_KEY)||'null'); return d; }catch(e){ return null; } }
+function saveDraft(){ try{ localStorage.setItem(DRAFT_KEY, JSON.stringify(overridesFrom(D))); }catch(e){} markDraft(); }
+function markDraft(){ const o=overridesFrom(D), b=overridesFrom(BASE); const dirty=JSON.stringify(o)!==JSON.stringify(b); $('#draftState').textContent=dirty?'draft has unexported changes — download overrides.json and send it to Jeff':'no unsaved changes'; $('#draftState').className=dirty?'warn':''; }
+function applyOverrides(base, ovr){ const d=JSON.parse(JSON.stringify(base)); if(!ovr) return d;
+  for(const c of d.clips){ const o=(ovr.clips||{})[c.id]; if(o){ for(const k of ['end','tags','notes','hidden','title','images']) if(k in o) c[k]=o[k]; if('end' in o) delete c.endEstimated; } }
+  for(const v of (ovr.videos||[])) if(!d.videos.some(x=>x.id===v.id)) d.videos.push(v);
+  for(const c of (ovr.newClips||[])) if(!d.clips.some(x=>x.id===c.id)) d.clips.push(Object.assign({cues:[],notes:'',tags:[],images:[],hidden:false},c));
+  if(ovr.groups) d.groups=ovr.groups; if(ovr.practices) d.practices=ovr.practices; return d; }
+function overridesFrom(d){ const clips={}, newClips=[]; const baseIds=new Set((BASE||d).clips.map(c=>c.id)), baseVids=new Set((BASE||d).videos.map(v=>v.id));
+  for(const c of d.clips){ if(c.added||!baseIds.has(c.id)){ newClips.push(c); continue; } clips[c.id]={end:c.end, tags:c.tags, notes:c.notes||'', hidden:!!c.hidden, title:c.title}; if(c.images&&c.images.length) clips[c.id].images=c.images; }
+  const videos=d.videos.filter(v=>v.added||!baseVids.has(v.id));
+  return {_comment:'Exported from coach mode '+new Date().toISOString().slice(0,16)+'. Merge into Playbook/tools/overrides.json and rebuild.', clips, videos, newClips, groups:d.groups, practices:d.practices}; }
+
+// ---------- player ----------
+let yt=null, ytReady=false, pendingClip=null, endTimer=null;
+window.onYouTubeIframeAPIReady=function(){ ytReady=true; if(pendingClip) playClip(pendingClip); };
+function ensureYT(){ if(window.YT&&window.YT.Player){ ytReady=true; return true; } if(!$('#ytapi')){ const s=document.createElement('script'); s.id='ytapi'; s.src='https://www.youtube.com/iframe_api'; document.head.appendChild(s); } return false; }
+function playClip(id){ const c=clip(id); if(!c) return; cur=id; renderNow(); highlight();
+  const v=video(c.videoId); if(!v) return;
+  if(!ytReady && !ensureYT()){ pendingClip=id; return; }
+  pendingClip=null; $('#ytEmpty').style.display='none';
+  const opts={videoId:v.youtubeId, startSeconds:c.start, endSeconds:c.end};
+  if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:{rel:0, modestbranding:1, playsinline:1, start:c.start, end:c.end}, videoId:v.youtubeId,
+      events:{onReady:()=>{ yt.loadVideoById(opts); }, onStateChange:e=>{ if(e.data===0){ if(loop&&cur) yt.loadVideoById({videoId:video(clip(cur).videoId).youtubeId, startSeconds:clip(cur).start, endSeconds:clip(cur).end}); else renderNow(true); } }}}); }
+  else yt.loadVideoById(opts);
+  if(location.hash!=='#clip='+id && !location.hash.startsWith('#coach')) history.replaceState(null,'', '#clip='+id+(view!=='today'?'&v='+view:''));
+}
+window.PB={ play:playClip };
+PB.toggleLoop=()=>{ loop=!loop; renderNow(); };
+PB.replay=()=>{ if(cur) playClip(cur); };
+PB.share=async()=>{ const url=location.origin+location.pathname+'#clip='+cur; try{ if(navigator.share) await navigator.share({title:clip(cur).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
+function renderNow(ended){ const box=$('#now'); if(!cur){ box.innerHTML='<span class="muted small">Tap a drill to play it here.</span>'; return; }
+  const c=clip(cur), v=video(c.videoId), s=v&&source(v.sourceId);
+  box.innerHTML=`<div class="src">${esc(s?s.title:'')} · ${esc(v?v.title:'')}</div>
+    <h3 style="margin-top:4px">${esc(c.title)}</h3>
+    <div class="row"><span class="mono small muted">${mmss(c.start)}–${mmss(c.end)} · ${mmss(c.end-c.start)}${c.endEstimated?' <span class="warn">(end estimated)</span>':''}</span>
+      <button class="${loop?'pri':''}" onclick="PB.toggleLoop()">${loop?'Looping':'Loop'}</button><button onclick="PB.replay()">${ended?'Replay':'Restart'}</button><button onclick="PB.share()">Share</button>
+      <a class="small" href="https://www.youtube.com/watch?v=${esc(v?v.youtubeId:'')}&t=${c.start}" target="_blank" rel="noopener">YouTube ↗</a></div>
+    ${c.cues&&c.cues.length?`<ul class="cues">${c.cues.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+    ${c.notes?`<div class="notes"><div class="eyebrow">How we use it</div>${md(c.notes)}</div>`:''}
+    ${(c.images||[]).map(im=>`<img src="${esc(im.url||im)}" alt="${esc(im.caption||'')}">`).join('')}
+    <div class="chips" style="margin-top:8px">${c.tags.map(t=>`<button class="chip ${D.tags.level.includes(t)?'lvl':(D.tags['clip-type']||[]).includes(t)?'type':''}" onclick="PB.byTag('${t}')">${t}</button>`).join('')}</div>
+    ${coach?editClipHtml(c):''}`;
+  if(coach) wireClipEditor(c);
+}
+function highlight(){ $$('.clip').forEach(el=>el.classList.toggle('playing', el.dataset.id===cur)); }
+
+// ---------- views ----------
+function setView(v){ view=v; $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); render(); }
+$('#nav').addEventListener('click',e=>{ const b=e.target.closest('button[data-v]'); if(b){ tagFilter=null; setView(b.dataset.v); if(!location.hash.startsWith('#coach')) history.replaceState(null,'','#v='+b.dataset.v); } });
+PB.byTag=t=>{ tagFilter=t; q=''; setView('search'); };
+function clipRow(c,i,extra){ const v=video(c.videoId); return `<div class="clip${c.id===cur?' playing':''}${c.hidden?' muted':''}" data-id="${c.id}" onclick="PB.play('${c.id}')">
+  <span class="n">${i!=null?i+1:''}</span>
+  <div><div class="t">${esc(c.title)}${c.hidden?' <span class="small warn">(hidden)</span>':''}</div><div class="m">${esc(v?v.title:'')}${extra||''}</div></div>
+  <span class="dur${c.endEstimated?' est':''}" title="${c.endEstimated?'end time estimated':''}">${mmss(c.end-c.start)}</span></div>`; }
+function groupCard(g){ const ids=g.clipIds.filter(id=>clip(id)&&(!clip(id).hidden||coach));
+  return `<div class="card" id="g-${esc(g.id)}"><div class="kicker"><h2>${esc(g.title)}${g.hidden?' <span class="small warn">(hidden)</span>':''}</h2><div class="chips"><span class="chip lvl">${esc(g.level||'all')}</span><span class="chip">${ids.length} clips</span></div></div>
+   ${g.description?`<div class="desc">${md(g.description)}</div>`:''}
+   ${coach?editGroupHtml(g):''}
+   ${ids.map((id,i)=>clipRow(clip(id),i)).join('')||'<div class="empty">No clips yet.</div>'}</div>`; }
+function render(){ const m=$('#main'); if(!D){ m.innerHTML='<div class="empty">Loading…</div>'; return; }
+  if(view==='today'){ const pubs=D.practices.filter(p=>p.published||coach).sort((a,b)=>a.date.localeCompare(b.date)); const next=pubs.find(p=>p.date>=today())||pubs[pubs.length-1];
+    m.innerHTML=next?practiceHtml(next,true):'<div class="card"><h2>No practice posted</h2><div class="desc">Check the Library while you wait.</div></div>'; if(coach&&next) wirePracticeEditor(next); }
+  else if(view==='library'){ const groups=D.groups.filter(g=>(!g.hidden||coach)&&(level==='all'||(g.level||'all')===level||(g.level||'all')==='all'));
+    m.innerHTML=`<div class="filters">${['all','varsity','jv'].map(l=>`<button class="chip lvl ${level===l?'on':''}" onclick="PB.setLevel('${l}')">${l}</button>`).join('')}<span class="small muted">${visibleClips().length} clips · ${D.groups.length} groups</span></div>`+groups.map(groupCard).join('');
+    if(coach) D.groups.forEach(wireGroupEditor); }
+  else if(view==='practices'){ const ps=D.practices.filter(p=>p.published||coach).sort((a,b)=>b.date.localeCompare(a.date));
+    m.innerHTML=`<div class="card"><h2>Practice plans</h2><div class="plist">${ps.map(p=>`<div class="p" onclick="PB.openPractice('${esc(p.id)}')"><span class="d">${esc(p.date)}</span><span>${esc(p.title)}${p.published?'':' <span class="small warn">(draft)</span>'}</span><span class="muted small" style="margin-left:auto">${p.blocks.length} blocks · ${p.blocks.reduce((a,b)=>a+(+b.minutes||0),0)} min</span></div>`).join('')||'<div class="empty">None yet.</div>'}</div></div>`; }
+  else if(view==='practice'){ const p=byId(D.practices,PB._p); m.innerHTML=p?`<button class="ghost small" onclick="PB.nav('practices')">← All practices</button>`+practiceHtml(p,false):'<div class="empty">Not found.</div>'; if(coach&&p) wirePracticeEditor(p); }
+  else if(view==='clipper'){ m.innerHTML=clipperHtml(); wireClipper(); }
+  else if(view==='search'){ const terms=q.toLowerCase().split(/\s+/).filter(Boolean);
+    const hits=visibleClips().filter(c=>(!tagFilter||c.tags.includes(tagFilter))&&terms.every(t=>(c.title+' '+(c.cues||[]).join(' ')+' '+(c.notes||'')+' '+c.tags.join(' ')+' '+(video(c.videoId)||{}).title).toLowerCase().includes(t)));
+    m.innerHTML=`<div class="card"><div class="filters"><input id="q" placeholder="Search drills, cues, tags…" value="${esc(q)}" autocomplete="off">${tagFilter?`<button class="chip on" onclick="PB.byTag(null)">${esc(tagFilter)} ✕</button>`:''}</div>
+      <div class="chips" style="margin-bottom:10px">${allTags().filter(t=>visibleClips().some(c=>c.tags.includes(t))).map(t=>`<button class="chip ${t===tagFilter?'on':''}" onclick="PB.byTag('${t}')">${t}</button>`).join('')}</div>
+      ${hits.map((c,i)=>clipRow(c,null,' · '+c.tags.slice(0,4).join(', '))).join('')||'<div class="empty">Nothing matches.</div>'}</div>`;
+    const inp=$('#q'); inp.addEventListener('input',()=>{ q=inp.value; const list=$('#main'); const pos=inp.selectionStart; render(); const n=$('#q'); n.focus(); n.setSelectionRange(pos,pos); }); }
+  highlight(); }
+PB.setLevel=l=>{ level=l; render(); };
+PB.nav=v=>setView(v);
+PB.openPractice=id=>{ PB._p=id; setView('practice'); if(!location.hash.startsWith('#coach')) history.replaceState(null,'','#practice='+id); };
+function practiceHtml(p,isToday){ const total=p.blocks.reduce((a,b)=>a+(+b.minutes||0),0);
+  return `<div class="card" id="p-${esc(p.id)}"><div class="eyebrow">${isToday?(p.date===today()?'Today':p.date>today()?'Next practice':'Most recent'):'Practice plan'} · ${esc(p.date)}${p.published?'':' · <span class="warn">draft</span>'}</div>
+   <div class="kicker"><h2 style="margin-top:4px">${esc(p.title)}</h2><span class="mono small muted">${total} min · ${p.blocks.reduce((a,b)=>a+b.clipIds.length,0)} clips</span></div>
+   ${p.intro?`<div class="desc">${md(p.intro)}</div>`:''}
+   ${coach?editPracticeHtml(p):''}
+   ${p.blocks.map((b,i)=>`<div class="block" data-i="${i}"><h3>${esc(b.title)} <span class="min">${b.minutes?b.minutes+' min':''}</span></h3>${b.text?md(b.text):''}
+      ${b.video?`<div class="clip" onclick="PB.playRaw('${esc(b.video.youtubeId)}',${+b.video.start||0},${+b.video.end||0},'${esc(b.title)}')"><span class="n">▶</span><div><div class="t">${esc(b.video.title||'Video')}</div><div class="m">our video</div></div><span class="dur">${b.video.end?mmss(b.video.end-(b.video.start||0)):''}</span></div>`:''}
+      ${b.clipIds.map(id=>clip(id)).filter(Boolean).map((c,j)=>clipRow(c,null)).join('')}
+      ${(b.images||[]).map(im=>`<img src="${esc(im.url||im)}" alt="${esc(im.caption||'')}">${im.caption?`<div class="small muted">${esc(im.caption)}</div>`:''}`).join('')}
+      ${coach?editBlockHtml(p,b,i):''}</div>`).join('')}
+   <div class="row" style="margin-top:12px"><button onclick="PB.sharePractice('${esc(p.id)}')">Share this plan</button></div></div>`; }
+PB.sharePractice=async id=>{ const url=location.origin+location.pathname+'#practice='+id; try{ if(navigator.share) await navigator.share({title:byId(D.practices,id).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
+// raw YouTube (a coach's own unlisted video in a practice block)
+PB.playRaw=(ytId,start,end,title)=>{ cur=null; $('#ytEmpty').style.display='none'; const opts={videoId:ytId,startSeconds:start||0}; if(end) opts.endSeconds=end;
+  if(!ytReady && !ensureYT()){ pendingRaw=opts; return; } if(!yt){ yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com', playerVars:{rel:0,playsinline:1}, videoId:ytId, events:{onReady:()=>yt.loadVideoById(opts)}}); } else yt.loadVideoById(opts);
+  $('#now').innerHTML=`<div class="src">Our video</div><h3>${esc(title||'')}</h3>`; };
+let pendingRaw=null; const _r=window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady=function(){ _r(); if(pendingRaw){ const o=pendingRaw; pendingRaw=null; if(!yt) yt=new YT.Player('yt',{host:'https://www.youtube-nocookie.com',playerVars:{rel:0,playsinline:1},videoId:o.videoId,events:{onReady:()=>yt.loadVideoById(o)}}); else yt.loadVideoById(o); } };
+
+// ---------- coach mode ----------
+PB.setCoach=on=>{ coach=on; $('#coachbar').classList.toggle('on',on); $('#wrap').classList.toggle('wide',on); render(); renderNow(); markDraft(); };
+function tagPicker(sel, onChange){ const rows=Object.entries(D.tags).filter(([k])=>k!=='source'); const id='tp'+Math.random().toString(36).slice(2,7);
+  setTimeout(()=>{ const box=document.getElementById(id); if(!box) return; box.addEventListener('click',e=>{ const b=e.target.closest('button[data-t]'); if(!b) return; const t=b.dataset.t; const i=sel.indexOf(t); if(i>=0) sel.splice(i,1); else sel.push(t); b.classList.toggle('on'); onChange(); }); },0);
+  return `<div class="tagpick" id="${id}">${rows.map(([k,ts])=>`<span class="grp">${k.replace(/-/g,' ')}</span>`+ts.map(t=>`<button type="button" class="chip ${sel.includes(t)?'on':''}" data-t="${t}">${t}</button>`).join('')).join('')}</div>`; }
+function editClipHtml(c){ return `<div class="ed" id="edc"><div class="eyebrow">Edit clip</div>
+  <div class="r"><label>Title<input data-k="title" value="${esc(c.title)}"></label><label style="flex:0 0 90px">Start<input data-k="start" value="${mmss(c.start)}" disabled></label><label style="flex:0 0 90px">End<input data-k="end" value="${mmss(c.end)}"></label><label style="flex:0 0 80px">Hidden<input type="checkbox" data-k="hidden" ${c.hidden?'checked':''}></label></div>
+  <label>How we use it (markdown)<textarea data-k="notes">${esc(c.notes||'')}</textarea></label>
+  <label>Image URL (whiteboard GIF/PNG in assets/, optional)<input data-k="image" value="${esc((c.images&&c.images[0]&&(c.images[0].url||c.images[0]))||'')}" placeholder="assets/6on5-4-2.gif"></label>
+  <div class="eyebrow">Tags</div>${tagPicker(c.tags,()=>{saveDraft(); render();})}
+  <div class="r"><button class="pri" data-act="save">Apply</button><span class="small muted">Changes stay in this browser until you download overrides.json.</span></div></div>`; }
+function wireClipEditor(c){ const ed=$('#edc'); if(!ed) return; ed.querySelector('[data-act=save]').addEventListener('click',()=>{ const g=k=>ed.querySelector(`[data-k=${k}]`);
+  const end=parseTime(g('end').value); if(isNaN(end)||end<=c.start){ toast('End must be after start (m:ss)'); return; }
+  c.title=g('title').value.trim()||c.title; c.end=end; delete c.endEstimated; c.hidden=g('hidden').checked; c.notes=g('notes').value; const im=g('image').value.trim(); c.images=im?[{url:im}]:[]; saveDraft(); render(); renderNow(); toast('Applied'); }); }
+function editGroupHtml(g){ return `<div class="ed" data-g="${esc(g.id)}"><div class="r"><label>Title<input data-k="title" value="${esc(g.title)}"></label><label style="flex:0 0 110px">Level<select data-k="level">${['all','varsity','jv'].map(l=>`<option ${g.level===l?'selected':''}>${l}</option>`).join('')}</select></label><label style="flex:0 0 70px">Hidden<input type="checkbox" data-k="hidden" ${g.hidden?'checked':''}></label>
+  <span class="mv"><button data-act="up">▲</button><button data-act="down">▼</button></span><button data-act="del" class="ghost warn">Delete group</button></div>
+  <label>Description (markdown)<textarea data-k="description">${esc(g.description||'')}</textarea></label>
+  <div class="eyebrow">Clips in this group — ▲▼ reorder, ✕ remove</div><div>${g.clipIds.map((id,i)=>`<div class="r" style="padding:2px 0"><span class="mv"><button data-mv="${i}:-1">▲</button><button data-mv="${i}:1">▼</button><button data-rm="${i}">✕</button></span><span class="small">${esc(clip(id)?clip(id).title:id)}</span></div>`).join('')}</div>
+  <label>Add a clip<input data-k="find" placeholder="type to search…"></label><div class="pick" data-pick hidden></div>
+  <div class="r"><button class="pri" data-act="save">Apply</button></div></div>`; }
+function wireGroupEditor(g){ const ed=$(`.ed[data-g="${g.id}"]`); if(!ed) return; const gi=D.groups.indexOf(g);
+  ed.querySelector('[data-act=save]').addEventListener('click',()=>{ g.title=ed.querySelector('[data-k=title]').value.trim()||g.title; g.level=ed.querySelector('[data-k=level]').value; g.hidden=ed.querySelector('[data-k=hidden]').checked; g.description=ed.querySelector('[data-k=description]').value; saveDraft(); render(); toast('Applied'); });
+  ed.querySelector('[data-act=up]').addEventListener('click',()=>{ if(gi>0){ D.groups.splice(gi,1); D.groups.splice(gi-1,0,g); saveDraft(); render(); } });
+  ed.querySelector('[data-act=down]').addEventListener('click',()=>{ if(gi<D.groups.length-1){ D.groups.splice(gi,1); D.groups.splice(gi+1,0,g); saveDraft(); render(); } });
+  ed.querySelector('[data-act=del]').addEventListener('click',()=>{ if(confirm(`Delete group "${g.title}"? Clips stay in the library.`)){ D.groups.splice(gi,1); saveDraft(); render(); } });
+  ed.querySelectorAll('[data-mv]').forEach(b=>b.addEventListener('click',()=>{ const [i,d]=b.dataset.mv.split(':').map(Number); const j=i+d; if(j<0||j>=g.clipIds.length) return; [g.clipIds[i],g.clipIds[j]]=[g.clipIds[j],g.clipIds[i]]; saveDraft(); render(); }));
+  ed.querySelectorAll('[data-rm]').forEach(b=>b.addEventListener('click',()=>{ g.clipIds.splice(+b.dataset.rm,1); saveDraft(); render(); }));
+  wirePicker(ed, id=>{ if(!g.clipIds.includes(id)){ g.clipIds.push(id); saveDraft(); render(); } }); }
+function wirePicker(ed,onPick){ const inp=ed.querySelector('[data-k=find]'), box=ed.querySelector('[data-pick]'); inp.addEventListener('input',()=>{ const t=inp.value.toLowerCase(); if(t.length<2){ box.hidden=true; return; } const hits=D.clips.filter(c=>(c.title+' '+c.tags.join(' ')).toLowerCase().includes(t)).slice(0,12); box.innerHTML=hits.map(c=>`<div data-id="${c.id}">${esc(c.title)} <span class="muted">· ${esc(video(c.videoId).title)}</span></div>`).join('')||'<div class="muted">no match</div>'; box.hidden=false; });
+  box.addEventListener('click',e=>{ const d=e.target.closest('[data-id]'); if(d){ onPick(d.dataset.id); inp.value=''; box.hidden=true; } }); }
+function editPracticeHtml(p){ return `<div class="ed" data-p="${esc(p.id)}"><div class="r"><label style="flex:0 0 150px">Date<input type="date" data-k="date" value="${esc(p.date)}"></label><label>Title<input data-k="title" value="${esc(p.title)}"></label><label style="flex:0 0 90px">Published<input type="checkbox" data-k="published" ${p.published?'checked':''}></label><button data-act="del" class="ghost warn">Delete plan</button></div>
+  <label>Intro (markdown)<textarea data-k="intro">${esc(p.intro||'')}</textarea></label>
+  <div class="r"><button class="pri" data-act="save">Apply</button><button data-act="addblock">+ Block</button></div></div>`; }
+function editBlockHtml(p,b,i){ return `<div class="ed" data-b="${i}"><div class="r"><label>Block title<input data-k="title" value="${esc(b.title)}"></label><label style="flex:0 0 80px">Minutes<input data-k="minutes" value="${esc(b.minutes||'')}"></label><span class="mv"><button data-act="up">▲</button><button data-act="down">▼</button></span><button data-act="del" class="ghost warn">Delete block</button></div>
+  <label>What we're doing (markdown)<textarea data-k="text">${esc(b.text||'')}</textarea></label>
+  <div class="eyebrow">Clips — ▲▼ reorder, ✕ remove</div><div>${b.clipIds.map((id,j)=>`<div class="r" style="padding:2px 0"><span class="mv"><button data-mv="${j}:-1">▲</button><button data-mv="${j}:1">▼</button><button data-rm="${j}">✕</button></span><span class="small">${esc(clip(id)?clip(id).title:id)}</span></div>`).join('')}</div>
+  <label>Add a clip<input data-k="find" placeholder="type to search…"></label><div class="pick" data-pick hidden></div>
+  <div class="r"><label>Our video (YouTube ID or URL, optional)<input data-k="yt" value="${esc(b.video?b.video.youtubeId:'')}"></label><label style="flex:0 0 90px">Start<input data-k="ys" value="${b.video&&b.video.start?mmss(b.video.start):''}"></label><label style="flex:0 0 90px">End<input data-k="ye" value="${b.video&&b.video.end?mmss(b.video.end):''}"></label></div>
+  <label>Whiteboard image URL (GIF/PNG in assets/, optional)<input data-k="image" value="${esc((b.images&&b.images[0]&&(b.images[0].url||b.images[0]))||'')}" placeholder="assets/6on5-4-2.gif"></label>
+  <div class="r"><button class="pri" data-act="save">Apply</button></div></div>`; }
+function wirePracticeEditor(p){ const ed=$(`.ed[data-p="${p.id}"]`); if(!ed) return; const pi=D.practices.indexOf(p);
+  ed.querySelector('[data-act=save]').addEventListener('click',()=>{ p.date=ed.querySelector('[data-k=date]').value||p.date; p.title=ed.querySelector('[data-k=title]').value.trim()||p.title; p.published=ed.querySelector('[data-k=published]').checked; p.intro=ed.querySelector('[data-k=intro]').value; saveDraft(); render(); toast('Applied'); });
+  ed.querySelector('[data-act=addblock]').addEventListener('click',()=>{ p.blocks.push({title:'New block',minutes:10,text:'',clipIds:[],images:[]}); saveDraft(); render(); });
+  ed.querySelector('[data-act=del]').addEventListener('click',()=>{ if(confirm(`Delete practice "${p.title}"?`)){ D.practices.splice(pi,1); saveDraft(); setView('practices'); } });
+  $$('.ed[data-b]').forEach(bed=>{ const i=+bed.dataset.b, b=p.blocks[i];
+    bed.querySelector('[data-act=save]').addEventListener('click',()=>{ b.title=bed.querySelector('[data-k=title]').value.trim()||b.title; b.minutes=+bed.querySelector('[data-k=minutes]').value||0; b.text=bed.querySelector('[data-k=text]').value;
+      const yt=bed.querySelector('[data-k=yt]').value.trim(); const m=yt.match(/(?:v=|youtu\.be\/|^)([A-Za-z0-9_-]{11})(?:[&?#]|$)/); if(m){ b.video={youtubeId:m[1], title:b.video&&b.video.title||b.title}; const s=parseTime(bed.querySelector('[data-k=ys]').value||0), e=parseTime(bed.querySelector('[data-k=ye]').value||0); if(!isNaN(s)) b.video.start=s; if(!isNaN(e)&&e) b.video.end=e; } else delete b.video;
+      const im=bed.querySelector('[data-k=image]').value.trim(); b.images=im?[{url:im}]:[]; saveDraft(); render(); toast('Applied'); });
+    bed.querySelector('[data-act=up]').addEventListener('click',()=>{ if(i>0){ p.blocks.splice(i,1); p.blocks.splice(i-1,0,b); saveDraft(); render(); } });
+    bed.querySelector('[data-act=down]').addEventListener('click',()=>{ if(i<p.blocks.length-1){ p.blocks.splice(i,1); p.blocks.splice(i+1,0,b); saveDraft(); render(); } });
+    bed.querySelector('[data-act=del]').addEventListener('click',()=>{ if(confirm('Delete this block?')){ p.blocks.splice(i,1); saveDraft(); render(); } });
+    bed.querySelectorAll('[data-mv]').forEach(x=>x.addEventListener('click',()=>{ const [j,d]=x.dataset.mv.split(':').map(Number); const k=j+d; if(k<0||k>=b.clipIds.length) return; [b.clipIds[j],b.clipIds[k]]=[b.clipIds[k],b.clipIds[j]]; saveDraft(); render(); }));
+    bed.querySelectorAll('[data-rm]').forEach(x=>x.addEventListener('click',()=>{ b.clipIds.splice(+x.dataset.rm,1); saveDraft(); render(); }));
+    wirePicker(bed, id=>{ if(!b.clipIds.includes(id)){ b.clipIds.push(id); saveDraft(); render(); } }); }); }
+PB.newPractice=()=>{ const d=today(); const id=d+'-'+Math.random().toString(36).slice(2,5); D.practices.push({id, date:d, title:'New practice', published:false, intro:'', blocks:[{title:'Warm-up',minutes:15,text:'',clipIds:[],images:[]}]}); saveDraft(); PB.openPractice(id); };
+PB.newGroup=()=>{ const id='g-'+Math.random().toString(36).slice(2,7); D.groups.push({id, title:'New group', level:'all', hidden:false, description:'', clipIds:[]}); saveDraft(); setView('library'); setTimeout(()=>{ const el=document.getElementById('g-'+id); if(el) el.scrollIntoView({behavior:'smooth'}); },50); };
+PB.exportOverrides=()=>{ const blob=new Blob([JSON.stringify(overridesFrom(D),null,1)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='overrides.json'; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},500); toast('Downloaded — send overrides.json to Jeff to publish'); };
+PB.discardDraft=()=>{ if(!confirm('Discard all unexported changes in this browser?')) return; try{ localStorage.removeItem(DRAFT_KEY); }catch(e){} D=applyOverrides(BASE,null); render(); renderNow(); markDraft(); };
+
+// ---------- clipper (coach): mark in/out on any YouTube video → new clip ----------
+let clipVid=null;
+PB.clipper=()=>{ view='clipper'; $$('#nav button').forEach(b=>b.classList.remove('on')); render(); };
+function clipperHtml(){ const v=clipVid?video(clipVid):null; const draft=PB._cd||{start:null,end:null,title:'',tags:['stx','drill','all']};
+  return `<div class="card"><h2>Clip from YouTube</h2><div class="desc">Paste a video, play it in the player, tap <b>Set start</b> and <b>Set end</b> while you watch, name it, tag it, add. It joins the library like any other clip — no download.</div>
+  <div class="ed"><div class="r"><label>YouTube URL or ID<input id="clUrl" value="${esc(v?v.youtubeId:'')}" placeholder="https://www.youtube.com/watch?v=…"></label><label style="flex:0 0 160px">Source<select id="clSrc">${D.sources.filter(s=>s.id!=='kocur').map(s=>`<option value="${s.id}" ${v&&v.sourceId===s.id?'selected':''}>${esc(s.title)}</option>`).join('')}</select></label><label>Video title<input id="clVt" value="${esc(v?v.title:'')}" placeholder="8/27/26 CCHS vs Newport"></label><button id="clLoad" class="pri">Load</button></div>
+  ${v?`<div class="r"><button id="clS">Set start (now)</button><span class="mono" id="clSv">${draft.start!=null?mmss(draft.start):'—'}</span><button id="clE">Set end (now)</button><span class="mono" id="clEv">${draft.end!=null?mmss(draft.end):'—'}</span><button id="clPrev" ${draft.start==null||draft.end==null?'disabled':''}>Preview</button></div>
+  <div class="r"><label>Clip title<input id="clT" value="${esc(draft.title)}" placeholder="Newport 6-on-5: 4-2 weak-side shot"></label></div>
+  <label>How we use it (markdown, optional)<textarea id="clN">${esc(draft.notes||'')}</textarea></label>
+  <div class="eyebrow">Tags</div>${tagPicker(draft.tags,()=>{})}
+  <div class="r"><button id="clAdd" class="pri" ${draft.start==null||draft.end==null?'disabled':''}>Add clip</button><span class="small muted">Then put it in a group or a practice block.</span></div>`:''}</div>
+  ${v?`<div class="card"><h4>Clips already cut from this video</h4>${D.clips.filter(c=>c.videoId===v.id).map((c,i)=>clipRow(c,i)).join('')||'<div class="empty">none yet</div>'}</div>`:''}`; }
+function wireClipper(){ PB._cd=PB._cd||{start:null,end:null,title:'',tags:['stx','drill','all']}; const d=PB._cd;
+  $('#clLoad').addEventListener('click',()=>{ const m=$('#clUrl').value.trim().match(/(?:v=|youtu\.be\/|shorts\/|^)([A-Za-z0-9_-]{11})(?:[&?#\/]|$)/); if(!m){ toast('Not a YouTube URL or ID'); return; }
+    const ytId=m[1], src=$('#clSrc').value||'stx'; let v=D.videos.find(x=>x.youtubeId===ytId); if(!v){ v={id:src+'-'+ytId, sourceId:src, title:$('#clVt').value.trim()||ytId, youtubeId:ytId, duration:0, overview:'', added:true}; D.videos.push(v); saveDraft(); } else if($('#clVt').value.trim()) v.title=$('#clVt').value.trim();
+    clipVid=v.id; PB._cd={start:null,end:null,title:'',tags:['stx','drill','all']}; render(); PB.playRaw(ytId,0,0,v.title); });
+  const now=()=>{ try{ return Math.round(yt.getCurrentTime()); }catch(e){ return 0; } };
+  if($('#clS')){ $('#clS').addEventListener('click',()=>{ d.start=now(); if(d.end!=null&&d.end<=d.start) d.end=null; render(); });
+    $('#clE').addEventListener('click',()=>{ const t=now(); if(d.start==null||t<=d.start){ toast('Set start first, then end after it'); return; } d.end=t; render(); });
+    $('#clPrev').addEventListener('click',()=>{ const v=video(clipVid); PB.playRaw(v.youtubeId,d.start,d.end,d.title||'preview'); });
+    $('#clT').addEventListener('input',e=>d.title=e.target.value); $('#clN').addEventListener('input',e=>d.notes=e.target.value);
+    $('#clAdd').addEventListener('click',()=>{ if(!d.title.trim()){ toast('Give the clip a title'); return; } const v=video(clipVid); const id=v.id+'-'+d.start; if(clip(id)){ toast('A clip already starts there'); return; }
+      D.clips.push({id, videoId:v.id, title:d.title.trim(), start:d.start, end:d.end, cues:[], notes:d.notes||'', tags:[...d.tags], images:[], hidden:false, added:true}); saveDraft(); PB._cd={start:null,end:null,title:'',tags:[...d.tags]}; render(); toast('Clip added — find it in Search or add it to a group'); }); } }
+
+// ---------- misc ----------
+let tt; function toast(m){ let t=$('#toast'); if(!t){ t=document.createElement('div'); t.id='toast'; t.style.cssText='position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:8px 14px;border-radius:10px;font-size:14px;z-index:9;opacity:0;transition:opacity .2s'; document.body.appendChild(t); } t.textContent=m; t.style.opacity=1; clearTimeout(tt); tt=setTimeout(()=>t.style.opacity=0,1800); }
+function route(){ const h=location.hash.replace(/^#/,''); const params=Object.fromEntries(h.split('&').filter(Boolean).map(kv=>{ const [k,v]=kv.split('='); return [k, v===undefined?'1':decodeURIComponent(v)]; }));
+  if('coach' in params){ PB.setCoach(true); }
+  if(params.practice){ PB._p=params.practice; view='practice'; }
+  else if(params.v){ view=params.v; }
+  else if(params.clip){ view=params.v||'library'; }
+  else if(params.group){ view='library'; }
+  $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===view)); render();
+  if(params.clip&&clip(params.clip)) playClip(params.clip);
+  if(params.group){ setTimeout(()=>{ const el=document.getElementById('g-'+params.group); if(el) el.scrollIntoView(); },50); } }
+window.addEventListener('hashchange',()=>{ if(location.hash.startsWith('#coach')||location.hash===''&&coach) return; route(); });
+async function boot(){ try{ if(window.__PLAYBOOK) BASE=window.__PLAYBOOK; else { const r=await fetch('playbook.json',{cache:'no-cache'}); BASE=await r.json(); } }
+  catch(e){ $('#main').innerHTML='<div class="card"><h2>Could not load playbook.json</h2><div class="desc">Check the connection and reload.</div></div>'; return; }
+  D=applyOverrides(BASE, loadDraft()); $('#updated').textContent='content updated '+(BASE.updated||''); route(); markDraft(); }
+PB._test={ get D(){return D;}, set D(v){D=v;}, get BASE(){return BASE;}, render, route, applyOverrides, overridesFrom, md, parseTime, mmss, get cur(){return cur;} };
+document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
+</body>
+</html>
