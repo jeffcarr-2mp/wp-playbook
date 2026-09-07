@@ -1,0 +1,21 @@
+{
+ "name": "ST X Playbook",
+ "short_name": "Playbook",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#F2F4F8",
+ "theme_color": "#003087",
+ "icons": [
+  {
+   "src": "icon-180.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
