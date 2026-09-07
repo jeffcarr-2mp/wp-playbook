@@ -1,0 +1,1530 @@
+{
+ "version": 1,
+ "updated": "2026-09-07",
+ "team": {
+  "name": "St. Xavier Water Polo",
+  "short": "ST X"
+ },
+ "tags": {
+  "phase-of-play": [
+   "offense",
+   "defense",
+   "counter",
+   "man-up",
+   "man-down",
+   "penalty",
+   "sprint",
+   "set-play",
+   "goalie",
+   "dryland"
+  ],
+  "position": [
+   "center",
+   "center-d",
+   "perimeter",
+   "point",
+   "wing",
+   "flat",
+   "driver",
+   "post",
+   "goalie"
+  ],
+  "tactic-action": [
+   "drive",
+   "release",
+   "pick",
+   "pick-3-4",
+   "pick-2-3",
+   "pick-1-2",
+   "stunt",
+   "press",
+   "drop",
+   "crash",
+   "foul-deny",
+   "front",
+   "seal",
+   "entry",
+   "press-break",
+   "6on5-4-2",
+   "6on5-3-3",
+   "5on6",
+   "ejection-draw",
+   "steal",
+   "block",
+   "timeout-play"
+  ],
+  "skill": [
+   "eggbeater",
+   "split-eggbeater",
+   "slip-stroke",
+   "stepping",
+   "hip-rotation",
+   "body-position",
+   "hand-fighting",
+   "ball-control",
+   "passing",
+   "dry-pass",
+   "wet-pass",
+   "cross-face",
+   "shooting",
+   "near-side",
+   "cross-cage",
+   "skip",
+   "lob",
+   "wrap",
+   "backhand",
+   "sweep",
+   "catch-shoot",
+   "fake",
+   "dive",
+   "wrestling",
+   "mobility",
+   "bands",
+   "core"
+  ],
+  "clip-type": [
+   "drill",
+   "game-film",
+   "example-good",
+   "example-bad",
+   "whiteboard",
+   "talk"
+  ],
+  "level": [
+   "varsity",
+   "jv",
+   "all"
+  ],
+  "source": [
+   "kocur",
+   "usawp-odp",
+   "stx",
+   "wpa",
+   "other",
+   "source",
+   "example-bad"
+  ]
+ },
+ "sources": [
+  {
+   "id": "stx",
+   "title": "St. X clips",
+   "instructor": "Coaches",
+   "channel": "unlisted YouTube",
+   "rights": "Our own footage or game film we are entitled to embed."
+  },
+  {
+   "id": "other",
+   "title": "Other",
+   "instructor": "",
+   "channel": "YouTube",
+   "rights": "Embedded from YouTube, never re-hosted."
+  },
+  {
+   "id": "kocur",
+   "title": "Performance Water Polo",
+   "instructor": "Jack Kocur",
+   "channel": "Andrei Tsvirinko (YouTube)",
+   "rights": "Embedded from YouTube; St. X has coach permission. Not re-hosted."
+  }
+ ],
+ "videos": [
+  {
+   "id": "kocur-1",
+   "sourceId": "kocur",
+   "n": 1,
+   "title": "Water Polo Strength & Conditioning",
+   "youtubeId": "m4huTH5619o",
+   "duration": 2521,
+   "overview": "Comprehensive dryland and in-water conditioning series covering active dynamic mobility, resistance-band rotator cuff prehab, core rotation, and in-water wrestling, positioning, and partner endurance drills."
+  },
+  {
+   "id": "kocur-2",
+   "sourceId": "kocur",
+   "n": 2,
+   "title": "Water Polo 2m Position",
+   "youtubeId": "Pezy619U9K8",
+   "duration": 1684,
+   "overview": "Center forward (hole set) and 2-meter defender battles: ball-side positioning, hand-fighting, split eggbeater leverage, turning/sealing, drawing exclusions, defensive recovery."
+  },
+  {
+   "id": "kocur-3",
+   "sourceId": "kocur",
+   "n": 3,
+   "title": "Water Polo Offense",
+   "youtubeId": "Pz0tJRuDE30",
+   "duration": 750,
+   "overview": "Perimeter driving, releases, and defender manipulation: separation against a press, feeding the center, fast-twitch direction changes."
+  },
+  {
+   "id": "kocur-4",
+   "sourceId": "kocur",
+   "n": 4,
+   "title": "Water Polo Defense",
+   "youtubeId": "qs5rv4ANe9k",
+   "duration": 1396,
+   "overview": "Perimeter press defense, tactical fouling, drop/crash positioning, driver denial. High hips, forearm leverage, perimeter awareness."
+  },
+  {
+   "id": "kocur-5",
+   "sourceId": "kocur",
+   "n": 5,
+   "title": "Water Polo Passing and Shooting",
+   "youtubeId": "ALbd3dEY1lM",
+   "duration": 2017,
+   "overview": "Live passing, ball protection under pressure, beating splitters, shoulder fakes and hitches, finishing releases."
+  },
+  {
+   "id": "kocur-6",
+   "sourceId": "kocur",
+   "n": 6,
+   "title": "Water Polo Fundamentals",
+   "youtubeId": "OPGrlnJhAbs",
+   "duration": 1894,
+   "overview": "Aquatic movement, eggbeater mechanics, elevation, horizontal-to-vertical balance, slide-and-shoot progressions."
+  }
+ ],
+ "clips": [
+  {
+   "id": "kocur-1-1",
+   "videoId": "kocur-1",
+   "title": "Series Introduction & Training Philosophy",
+   "start": 1,
+   "end": 55,
+   "cues": [
+    "Overview of the multi-module system: dryland mobility, functional strength, in-water body movement, perimeter play, center play, fitness."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-55",
+   "videoId": "kocur-1",
+   "title": "Active Dynamic Stretching Protocol",
+   "start": 55,
+   "end": 87,
+   "cues": [
+    "Dynamic, continuous movement over static holding.",
+    "Full-body: shoulders, thoracic spine, groin, hip flexors, knees, wrists, ankles."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "mobility",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-87",
+   "videoId": "kocur-1",
+   "title": "Upper-Body Mobility: Arm Swings, Butterfly & Elbow Spins",
+   "start": 87,
+   "end": 183,
+   "cues": [
+    "Forward/reverse arm circles (6–12 each); two-arm butterfly swings; elbow spins and wrist rotations (shot snap); single-arm rotational swings into throwing posture."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "mobility",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-183",
+   "videoId": "kocur-1",
+   "title": "Lower-Body Mobility: Hips, Groin & Hamstring Series",
+   "start": 183,
+   "end": 422,
+   "cues": [
+    "Seated quad/hip pulls; butterfly stretch, partner-assisted hamstring; supine spinal twist; high-knee chest pulls replicating eggbeater chambering."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "mobility",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-422",
+   "videoId": "kocur-1",
+   "title": "Resistance Band Shoulder Prehab Routine",
+   "start": 422,
+   "end": 660,
+   "cues": [
+    "15 min before every water workout.",
+    "Scarecrow row; elbow-pinned internal/external rotations at steady cadence; standing fake-throw with core rotation; triceps snap-through."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "bands",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2289",
+   "videoId": "kocur-1",
+   "title": "In-Water Resistance: Arm Lock Drill",
+   "start": 2289,
+   "end": 2328,
+   "cues": [
+    "Body contact while protecting the ball; torso at 45°; split eggbeater — lead leg straight down under shoulders, back leg at 45° driving forward."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "wrestling",
+    "split-eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2328",
+   "videoId": "kocur-1",
+   "title": "Conditioning & Wrestling: Dead Man Swimming Drill",
+   "start": 2328,
+   "end": 2381,
+   "cues": [
+    "Groups of three; two wrestle 5–10 s, sprint to wall on whistle; winner rests, loser stays in against the fresh player.",
+    "Cut off pursuit angles, keep the opponent on your back/hip."
+   ],
+   "notes": "",
+   "tags": [
+    "counter",
+    "wrestling",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2381",
+   "videoId": "kocur-1",
+   "title": "Tactical Water Protection: The Human Shield Drill",
+   "start": 2381,
+   "end": 2521,
+   "cues": [
+    "Protect an open ball without touching it; back to defender; continuous split eggbeater; elbows out in a straight line = \"your water\"; never swing elbows back past the midline."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "ball-control",
+    "split-eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-49",
+   "videoId": "kocur-2",
+   "title": "Center Trench Warfare Philosophy",
+   "start": 49,
+   "end": 88,
+   "cues": [
+    "Games are won at center.",
+    "Winning ball side forces the defense into a drop, opening driving and outside shooting lanes."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-88",
+   "videoId": "kocur-2",
+   "title": "Ball Control Drill (BC Drill)",
+   "start": 88,
+   "end": 186,
+   "cues": [
+    "Ball stays within the shoulder frame; hands slide under, never slap over; split eggbeater — one leg vertical, opposite leg at 45° behind.",
+    "Ball outside the frame = a steal."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "ball-control",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-186",
+   "videoId": "kocur-2",
+   "title": "Defend Your Opponent Drill (DYO Drill)",
+   "start": 186,
+   "end": 264,
+   "cues": [
+    "Control the jumping defender before going to the ball.",
+    "Breaststroke kick to seal the attacked side; near shoulder wedges, far hand controls the ball; head up for crashers and goalie."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "hand-fighting",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-264",
+   "videoId": "kocur-2",
+   "title": "Face Turn & Seal Drill",
+   "start": 264,
+   "end": 339,
+   "cues": [
+    "Ball on the weak-side triangle (1–2), center faces the strong side (4–5).",
+    "The moment the ball enters the strong side: under-armpit hook, rotate hips, seal before the pass arrives — or it is an offensive foul."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "seal",
+    "hip-rotation",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-339",
+   "videoId": "kocur-2",
+   "title": "Stroke & Spin vs. Stroke & Slip",
+   "start": 339,
+   "end": 480,
+   "cues": [
+    "Fronted tight: fake a hard stroke, chin to chest, whitewater, spin 180° behind the defender.",
+    "Separation: skip the spin, slip the inside arm under the armpit and kick through. (Slip at `00:06:33`.)"
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "front",
+    "seal",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1446",
+   "videoId": "kocur-2",
+   "title": "2m Defender: Suit Grab Spin-Out & Forearm Control",
+   "start": 1446,
+   "end": 1494,
+   "cues": [
+    "Release body contact first, then spin laterally to ball side.",
+    "Forearm contact on the set's back/shoulder, not wrist or waist — take the game out of the referee's hands."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "hand-fighting",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1494",
+   "videoId": "kocur-2",
+   "title": "2m Defender: Absorb & Lunge Drill",
+   "start": 1494,
+   "end": 1540,
+   "cues": [
+    "Don't drop vertical when the set backs down.",
+    "Stay at 45°, absorb with high hips; when the set squares to shoot, explode off a breaststroke kick to contest."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "body-position",
+    "block",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1540",
+   "videoId": "kocur-2",
+   "title": "2m Defender: Jump Inside Control Drill",
+   "start": 1540,
+   "end": 1684,
+   "cues": [
+    "Beaten inside: never swim over the back (exclusion or 5 m).",
+    "Stay horizontal, breaststroke kick around the side, inside hand hooks the armpit, outside hand up clean to deflect."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-47",
+   "videoId": "kocur-3",
+   "title": "Perimeter Philosophy & Fast-Twitch Manipulation",
+   "start": 47,
+   "end": 93,
+   "cues": [
+    "Make the defender commit weight and hips one way, exploit the counter-momentum.",
+    "Fast-twitch over slow swimming."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "driver",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-93",
+   "videoId": "kocur-3",
+   "title": "Fast-Twitch Drive & Step-Back Release",
+   "start": 93,
+   "end": 153,
+   "cues": [
+    "Sell 2–3 explosive strokes; as the defender commits and drops hips, step back over your hips into the vertical. 1–2 m of separation to feed set or shoot."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "driver",
+    "release",
+    "drive",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-153",
+   "videoId": "kocur-3",
+   "title": "Advanced Release (Ball-Side Hip Rotation)",
+   "start": 153,
+   "end": 237,
+   "cues": [
+    "Two strokes to the ball carrier; rotate hips flat along the surface (don't drop them); shins and knees brace into the defender underwater; control the ball with the outside hand."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "release",
+    "hip-rotation",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-237",
+   "videoId": "kocur-3",
+   "title": "Dig & Pop Drill",
+   "start": 237,
+   "end": 272,
+   "cues": [
+    "High-cadence slip strokes sell the drive; defender drops vertical; jump back over your legs into a high eggbeater to catch and redirect or feed."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "release",
+    "slip-stroke",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-272",
+   "videoId": "kocur-3",
+   "title": "Two-Stroke Release for Smaller Players",
+   "start": 272,
+   "end": 342,
+   "cues": [
+    "Sweep the inside arm across the defender's chest; the forearm becomes a shield; split eggbeater absorbs contact and keeps the passing window open."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "release",
+    "hand-fighting",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-342",
+   "videoId": "kocur-3",
+   "title": "Right-Back Drill",
+   "start": 342,
+   "end": 377,
+   "cues": [
+    "One crossing stroke to show the referee the hold, pop the chest out and return the ball live without stalling the clock."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "release",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-377",
+   "videoId": "kocur-3",
+   "title": "Drive-Up Release & High Post",
+   "start": 377,
+   "end": 460,
+   "cues": [
+    "Teammate drives down, you drive up into the vacant lane to balance the water; horizontal swim → protective vertical wall.",
+    "High-post: receive at 5 m, draw the foul, direct shot."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "post",
+    "release",
+    "ejection-draw",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-563",
+   "videoId": "kocur-3",
+   "title": "Stunt Move",
+   "start": 563,
+   "end": 621,
+   "cues": [
+    "Shake-and-bake: fast-twitch head/torso fake with whitewater, cut back against the defender's momentum, trail hand clears the hip.",
+    "Also keeps your defender from helping."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "driver",
+    "stunt",
+    "drive",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-621",
+   "videoId": "kocur-3",
+   "title": "Elbow Control & Inside Stroke Mechanics",
+   "start": 621,
+   "end": 715,
+   "cues": [
+    "Outside hand locks the defender's elbow/triceps, inside hand takes a full stroke.",
+    "Own the elbow, own the torso angle.",
+    "If he spins, step back over hips or cut across his back inside."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "driver",
+    "drive",
+    "hand-fighting",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-3-715",
+   "videoId": "kocur-3",
+   "title": "Grind & Shin Release",
+   "start": 715,
+   "end": 750,
+   "cues": [
+    "Inside stroke plus hip contact, then shins slide up the defender's torso and push off cleanly.",
+    "Never kick with the bottom of the foot (contra-foul)."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "driver",
+    "drive",
+    "release",
+    "hip-rotation",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-48",
+   "videoId": "kocur-4",
+   "title": "Perimeter Defensive Principles",
+   "start": 48,
+   "end": 97,
+   "cues": [
+    "Two breakdowns: losing ball-vs-man awareness, and dropping hips vertical (drivers spin or push off)."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-97",
+   "videoId": "kocur-4",
+   "title": "Standard Absorbed Shoulder Control",
+   "start": 97,
+   "end": 248,
+   "cues": [
+    "Lead hand/forearm on the attacker's lead shoulder while he holds the ball; body at 45° via breaststroke kick; the instant he releases, both hands up clean."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "press",
+    "hand-fighting",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-248",
+   "videoId": "kocur-4",
+   "title": "The Slip Move Steal",
+   "start": 248,
+   "end": 298,
+   "cues": [
+    "Attacker relaxes: breaststroke kick inside, knock the ball off the hand/elbow with the lead arm, raise the controlling arm to show no foul."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "steal",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-298",
+   "videoId": "kocur-4",
+   "title": "Foul & Deny Drill",
+   "start": 298,
+   "end": 367,
+   "cues": [
+    "Lunge, hit the elbow, tactical foul; rotate hips straight back into a 45° denial (split eggbeater); near hand takes the lane to set, trail arm sculls for height against the lob."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "foul-deny",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-367",
+   "videoId": "kocur-4",
+   "title": "Foul-to-Foul Drill",
+   "start": 367,
+   "end": 415,
+   "cues": [
+    "Against the right-back: don't sit in denial; rotate over hips, second breaststroke kick, knock him down and foul again before a live entry."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "foul-deny",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-415",
+   "videoId": "kocur-4",
+   "title": "Foul & Crash Drill",
+   "start": 415,
+   "end": 470,
+   "cues": [
+    "Their set has position: foul your man, spin over your hips, swim straight into the 2 m crash lane to double."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "perimeter",
+    "crash",
+    "drop",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-1154",
+   "videoId": "kocur-4",
+   "title": "Extra Stroke Drill (Driver Defense at 2 Meters)",
+   "start": 1154,
+   "end": 1231,
+   "cues": [
+    "Driver stops at the 2 m line: don't rest on his outside shoulder and reach over (5 m or exclusion).",
+    "The line is another defender — two extra strokes around, hips along the surface, take inside water."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-1231",
+   "videoId": "kocur-4",
+   "title": "Inside 4-Meter Pressing Drill",
+   "start": 1231,
+   "end": 1396,
+   "cues": [
+    "Unbroken contact with forearms, elbows or chest; head swivels man–ball; contact lost → find the man first, then the ball.",
+    "Hips up, never vertical."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "press",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-55",
+   "videoId": "kocur-5",
+   "title": "Passing Mastery & Setting the Defense",
+   "start": 55,
+   "end": 120,
+   "cues": [
+    "Great passers freeze defenders until the last moment.",
+    "Horizontal → 45° keeps passing angles live; if the defender doesn't value you, you are wasting the open man."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-120",
+   "videoId": "kocur-5",
+   "title": "Step-Away Passing (Weak Side)",
+   "start": 120,
+   "end": 146,
+   "cues": [
+    "Defender lunges to your strong side: step away.",
+    "Ball over the head, or a 360° eggbeater spin releasing without hesitation."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "passing",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-146",
+   "videoId": "kocur-5",
+   "title": "Step to Strong Side (Cross-Face Reception)",
+   "start": 146,
+   "end": 196,
+   "cues": [
+    "Cross-face catch exposes the blind side.",
+    "Step across into a split eggbeater diving to the strong side; off-hand digs laterally; breaststroke kick up and over the defender's hands."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "passing",
+    "cross-face",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-196",
+   "videoId": "kocur-5",
+   "title": "Step to Weak Side vs. Blindsiding Splitter",
+   "start": 196,
+   "end": 272,
+   "cues": [
+    "Vertical → horizontal dive to the weak side; breaststroke kick clears the trailing arm; off-hand shields for half a second."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "passing",
+    "dive",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-272",
+   "videoId": "kocur-5",
+   "title": "Step-Back Pass to Set",
+   "start": 272,
+   "end": 327,
+   "cues": [
+    "Against a zone knock-down: drop onto your back only momentarily (the 2 m defender can step out and steal), then snap hips and legs under and launch vertical to pass or shoot."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "entry",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-327",
+   "videoId": "kocur-5",
+   "title": "Step-In Pass & Shoulder Hitching",
+   "start": 327,
+   "end": 420,
+   "cues": [
+    "Attack the cage with the arm high so the splitter must commit; hitch the shoulders to make the goalie jump; slip the wrist pass to the open shooter."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "passing",
+    "fake",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1779",
+   "videoId": "kocur-5",
+   "title": "Shooting Mechanics: Fast-Twitch Shoulder Fakes",
+   "start": 1779,
+   "end": 1813,
+   "cues": [
+    "Twitch the lead shoulder and release immediately.",
+    "Ball stays behind or above the head; bringing it forward costs the re-cock and lets goalie and blocker reset."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1813",
+   "videoId": "kocur-5",
+   "title": "Cross-Face Near-Side Shot",
+   "start": 1813,
+   "end": 1876,
+   "cues": [
+    "Shoulders pre-aligned to the cage, not the passer; catch and release with zero hesitation before the goalie slides."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "cross-face",
+    "near-side",
+    "catch-shoot",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1876",
+   "videoId": "kocur-5",
+   "title": "Cross-Face Draw Shot",
+   "start": 1876,
+   "end": 1924,
+   "cues": [
+    "Body horizontal, legs moving with the ball; step across to open a new lane, draw goalie and blocker near-side, snap the wrist cross-cage."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "cross-face",
+    "cross-cage",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1924",
+   "videoId": "kocur-5",
+   "title": "Shooting Summary: Release Angles & Variety",
+   "start": 1924,
+   "end": 2017,
+   "cues": [
+    "Quickness and deceptive release beat velocity.",
+    "Wrap, overhead, wrist cross-cage, fast-twitch near side."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-56",
+   "videoId": "kocur-6",
+   "title": "Foundations of In-Water Agility",
+   "start": 56,
+   "end": 89,
+   "cues": [
+    "Seamless horizontal ↔ vertical transition is the foundation of every advanced skill."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "body-position",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-89",
+   "videoId": "kocur-6",
+   "title": "Treading Water & Eggbeater Mechanics",
+   "start": 89,
+   "end": 164,
+   "cues": [
+    "Knees wide, thighs perpendicular to the surface at 90°; feet in independent circles, snapping; upper body still.",
+    "Error: piston/scissor kick → bobbing, no visual stability."
+   ],
+   "notes": "",
+   "tags": [
+    "eggbeater",
+    "body-position",
+    "drill",
+    "all",
+    "example-bad"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-164",
+   "videoId": "kocur-6",
+   "title": "Tabletop / Spider Drill",
+   "start": 164,
+   "end": 223,
+   "cues": [
+    "Back flat on the surface; all four limbs sculling; legs = balance, arms = steering; quick 90° pivots."
+   ],
+   "notes": "",
+   "tags": [
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-223",
+   "videoId": "kocur-6",
+   "title": "Slip Stroke Technique",
+   "start": 223,
+   "end": 273,
+   "cues": [
+    "High-cadence freestyle recovery with high elbows, hands slice without pulling; legs coiled horizontal ready to kick away."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "slip-stroke",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-273",
+   "videoId": "kocur-6",
+   "title": "Stepping Drill",
+   "start": 273,
+   "end": 327,
+   "cues": [
+    "Body in a straight line at the surface; lead hand sculls, trail hand pulls to the hip.",
+    "Perimeter defenders sliding lanes; shooters stepping into pockets."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "stepping",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-327",
+   "videoId": "kocur-6",
+   "title": "Absorb & Drag Drill",
+   "start": 327,
+   "end": 383,
+   "cues": [
+    "Defender stays horizontal while driven backward; forearm on chest/shoulder with open hands visible; hips at the surface ready to kick out when the attacker goes to pass or shoot."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "body-position",
+    "hand-fighting",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-383",
+   "videoId": "kocur-6",
+   "title": "Left & Right Hip Swings (180° Switches)",
+   "start": 383,
+   "end": 470,
+   "cues": [
+    "Lead foot breaks the surface as the legs tuck tight under the torso; instant 180° redirection without dropping vertical."
+   ],
+   "notes": "",
+   "tags": [
+    "eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1684",
+   "videoId": "kocur-6",
+   "title": "Pass, Slide, Catch & Shoot (H2 Dive Progression)",
+   "start": 1684,
+   "end": 1734,
+   "cues": [
+    "Horizontal dive for 1–2 m into the lane, snap the foundation leg under to pop vertical, catch at peak height, finish.",
+    "Foundation leg = height, back leg = power."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "dive",
+    "catch-shoot",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1734",
+   "videoId": "kocur-6",
+   "title": "H2 Dive Counter-Attack Finishing",
+   "start": 1734,
+   "end": 1782,
+   "cues": [
+    "Strokes with the ball, snap the lead leg under, quick dive to freeze the trailer, read the goalie, finish."
+   ],
+   "notes": "",
+   "tags": [
+    "counter",
+    "shooting",
+    "dive",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1782",
+   "videoId": "kocur-6",
+   "title": "Weak-Side Slide, Catch & Shoot",
+   "start": 1782,
+   "end": 1894,
+   "cues": [
+    "Dive into the weak-side window before the ball arrives, shooting hand up during the slide, one-touch finish.",
+    "Shooters create their own movement."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "wing",
+    "shooting",
+    "dive",
+    "catch-shoot",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  }
+ ],
+ "groups": [
+  {
+   "id": "fundamentals",
+   "title": "Fundamentals — legs and body position",
+   "level": "all",
+   "hidden": false,
+   "description": "Everything else sits on this. If your eggbeater bobs or your hips drop, no drive, release or shot works. Watch the bad eggbeater in the first clip once, then don't be that guy.",
+   "clipIds": [
+    "kocur-6-89",
+    "kocur-6-164",
+    "kocur-6-383",
+    "kocur-6-273",
+    "kocur-6-223",
+    "kocur-1-2381"
+   ]
+  },
+  {
+   "id": "perimeter-offense",
+   "title": "Perimeter offense — releases and drives",
+   "level": "all",
+   "hidden": false,
+   "description": "How we get open on the perimeter. Fast-twitch sells the drive; the step-back over your hips is what actually creates the pass. Start with the drive/step-back and dig-and-pop; the hip-rotation release and grind/shin are varsity.",
+   "clipIds": [
+    "kocur-3-47",
+    "kocur-3-93",
+    "kocur-3-237",
+    "kocur-3-272",
+    "kocur-3-342",
+    "kocur-3-563",
+    "kocur-3-153",
+    "kocur-3-621",
+    "kocur-3-715",
+    "kocur-3-377"
+   ]
+  },
+  {
+   "id": "perimeter-defense",
+   "title": "Perimeter defense — press, foul, deny",
+   "level": "all",
+   "hidden": false,
+   "description": "Two ways we break down: losing ball-and-man, and dropping our hips. Hand on the shoulder while he has the ball, hands up the instant he passes. Foul-and-deny is our default when set has position.",
+   "clipIds": [
+    "kocur-4-48",
+    "kocur-4-97",
+    "kocur-4-298",
+    "kocur-4-367",
+    "kocur-4-415",
+    "kocur-4-248",
+    "kocur-4-1154",
+    "kocur-4-1231",
+    "kocur-6-327"
+   ]
+  },
+  {
+   "id": "center-offense",
+   "title": "2 m offense — ball control and sealing",
+   "level": "all",
+   "hidden": false,
+   "description": "Ball stays inside the shoulders, hands under it. Control the defender before the ball. Face-turn and seal the moment the ball crosses into the strong side.",
+   "clipIds": [
+    "kocur-2-49",
+    "kocur-2-88",
+    "kocur-2-186",
+    "kocur-2-264",
+    "kocur-2-339",
+    "kocur-1-2289"
+   ]
+  },
+  {
+   "id": "center-defense",
+   "title": "2 m defense — absorb, lunge, recover",
+   "level": "all",
+   "hidden": false,
+   "description": "Stay at 45°, never vertical. Forearm on the back, not wrists. Beaten inside: around, never over.",
+   "clipIds": [
+    "kocur-2-1494",
+    "kocur-2-1540",
+    "kocur-2-1446"
+   ]
+  },
+  {
+   "id": "passing",
+   "title": "Passing under pressure",
+   "level": "all",
+   "hidden": false,
+   "description": "Great passers freeze the defense until the last moment. Step away, step across, step back, step in — pick the one the splitter gives you.",
+   "clipIds": [
+    "kocur-5-55",
+    "kocur-5-120",
+    "kocur-5-146",
+    "kocur-5-196",
+    "kocur-5-272",
+    "kocur-5-327"
+   ]
+  },
+  {
+   "id": "shooting",
+   "title": "Shooting — release and deception",
+   "level": "all",
+   "hidden": false,
+   "description": "Quick beats hard. Ball stays behind the head through the fake. Cross-face near-side every day; the draw shot and the dive progressions once the near-side is automatic.",
+   "clipIds": [
+    "kocur-5-1779",
+    "kocur-5-1813",
+    "kocur-5-1876",
+    "kocur-6-1684",
+    "kocur-6-1734",
+    "kocur-6-1782",
+    "kocur-5-1924"
+   ]
+  },
+  {
+   "id": "conditioning",
+   "title": "Dryland and conditioning",
+   "level": "all",
+   "hidden": false,
+   "description": "Bands 15 minutes before every water session. Active stretching, never sit-and-hold. Dead Man Swimming when we want a fight.",
+   "clipIds": [
+    "kocur-1-55",
+    "kocur-1-87",
+    "kocur-1-183",
+    "kocur-1-422",
+    "kocur-1-2328"
+   ]
+  },
+  {
+   "id": "jv-starter",
+   "title": "JV starter set",
+   "level": "jv",
+   "hidden": false,
+   "description": "The eight clips every JV player should know cold by October. Legs, one release, one defensive stance, one shot.",
+   "clipIds": [
+    "kocur-6-89",
+    "kocur-6-273",
+    "kocur-3-93",
+    "kocur-3-237",
+    "kocur-4-97",
+    "kocur-4-298",
+    "kocur-2-88",
+    "kocur-5-1813"
+   ]
+  }
+ ],
+ "practices": [
+  {
+   "id": "2026-09-08-example",
+   "date": "2026-09-08",
+   "title": "EXAMPLE — Monday after Walnut Hills",
+   "published": true,
+   "intro": "**This is a drafted example so you can see the shape; edit or delete it.** Watch the linked clips before practice — 6 minutes total. We are fixing two things from Sunday: hips dropping on perimeter defense, and slow releases when set has position.",
+   "blocks": [
+    {
+     "title": "Bands + active stretch",
+     "minutes": 15,
+     "text": "On deck before you get wet. Scarecrow rows, internal/external rotation, fake-throws. Nobody in the water without bands.",
+     "clipIds": [
+      "kocur-1-422"
+     ],
+     "images": []
+    },
+    {
+     "title": "Legs: eggbeater, stepping, hip swings",
+     "minutes": 15,
+     "text": "Wide knees, still upper body. Stepping drill across the pool in a straight line at the surface. Hip swings — lead foot breaks the surface.",
+     "clipIds": [
+      "kocur-6-89",
+      "kocur-6-273",
+      "kocur-6-383"
+     ],
+     "images": []
+    },
+    {
+     "title": "Perimeter defense: shoulder control → foul and deny",
+     "minutes": 20,
+     "text": "Pairs. Hand on the shoulder while he holds it, hands UP when he passes. Then add the foul-and-deny: hit the elbow, back over your hips at 45°, lane hand up. Referees will call the hold if your hips are down — that is the fix from Sunday.",
+     "clipIds": [
+      "kocur-4-97",
+      "kocur-4-298"
+     ],
+     "images": []
+    },
+    {
+     "title": "Releases: drive/step-back and dig-and-pop",
+     "minutes": 20,
+     "text": "3 strokes hard, step back over your hips, catch, feed set. Then the dig-and-pop with slip strokes. Goal is 1–2 m of separation, not a swim.",
+     "clipIds": [
+      "kocur-3-93",
+      "kocur-3-237"
+     ],
+     "images": []
+    },
+    {
+     "title": "Shooting: cross-face near-side",
+     "minutes": 15,
+     "text": "Shoulders to the cage before the ball arrives. Catch and release, no hesitation. Every rep.",
+     "clipIds": [
+      "kocur-5-1813"
+     ],
+     "images": []
+    },
+    {
+     "title": "6-on-5 walk-through",
+     "minutes": 15,
+     "text": "Whiteboard first, then in the water at half speed. Whiteboard GIF goes here once we export one from WPA.",
+     "clipIds": [],
+     "images": []
+    }
+   ]
+  }
+ ]
+}
