@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-09-07",
+ "updated": "2026-09-10",
  "team": {
   "name": "St. Xavier Water Polo",
   "short": "ST X"
@@ -80,7 +80,10 @@
    "wrestling",
    "mobility",
    "bands",
-   "core"
+   "core",
+   "breaststroke-kick",
+   "lunge",
+   "sculling"
   ],
   "clip-type": [
    "drill",
@@ -125,7 +128,16 @@
    "title": "Performance Water Polo",
    "instructor": "Jack Kocur",
    "channel": "Andrei Tsvirinko (YouTube)",
-   "rights": "Embedded from YouTube; St. X has coach permission. Not re-hosted."
+   "rights": "Embedded from YouTube; St. X has coach permission. Not re-hosted.",
+   "indexed": true
+  },
+  {
+   "id": "usawp-odp",
+   "title": "USA Water Polo ODP",
+   "instructor": "Terry Schroeder, Brandon Brooks, ODP staff",
+   "channel": "Peter Zamoyski (YouTube)",
+   "rights": "Embedded from YouTube (\"Courtesy of USA Water Polo\"). Not re-hosted.",
+   "indexed": true
   }
  ],
  "videos": [
@@ -182,6 +194,69 @@
    "youtubeId": "OPGrlnJhAbs",
    "duration": 1894,
    "overview": "Aquatic movement, eggbeater mechanics, elevation, horizontal-to-vertical balance, slide-and-shoot progressions."
+  },
+  {
+   "id": "usawp-odp-1",
+   "sourceId": "usawp-odp",
+   "n": 1,
+   "title": "USAWP Base Position Fundamentals",
+   "youtubeId": "nQlPuhZ5Ylo",
+   "duration": 665,
+   "overview": "The base position for faking, passing and shooting: tripod legs and left arm, chest forward, shoulders 30-45° off the goal, elbow at ear height behind the shoulder line, wrist facing the target; the mistakes that break it; internal rotation; and the drills that build it."
+  },
+  {
+   "id": "usawp-odp-2",
+   "sourceId": "usawp-odp",
+   "n": 2,
+   "title": "Water Polo: ODP Eggbeater",
+   "youtubeId": "9LBF9DnZTF0",
+   "duration": 80,
+   "overview": "The eggbeater as ODP teaches it: balanced start, wide base, high knees, flat feet."
+  },
+  {
+   "id": "usawp-odp-3",
+   "sourceId": "usawp-odp",
+   "n": 3,
+   "title": "Water Polo: ODP Repeat Breaststroke Kicks",
+   "youtubeId": "zqPpjNmvpkk",
+   "duration": 112,
+   "overview": "Short fast breaststroke kicks from a 45° chest angle as the only power source, then the reach lunge."
+  },
+  {
+   "id": "usawp-odp-4",
+   "sourceId": "usawp-odp",
+   "n": 4,
+   "title": "Water Polo: ODP Spidering technique",
+   "youtubeId": "aOhOjCJCwUg",
+   "duration": 100,
+   "overview": "Working efficiently in the horizontal position, hips above chest, ready to explode."
+  },
+  {
+   "id": "usawp-odp-5",
+   "sourceId": "usawp-odp",
+   "n": 5,
+   "title": "Water Polo: ODP Skating + Lunging",
+   "youtubeId": "SkmFBPp41q0",
+   "duration": 103,
+   "overview": "Explosive 45° glides from the horizontal position, then the reach lunge that helps back to the center."
+  },
+  {
+   "id": "usawp-odp-6",
+   "sourceId": "usawp-odp",
+   "n": 6,
+   "title": "Water Polo: ODP Reverse Sculling",
+   "youtubeId": "urEiIHc3NYA",
+   "duration": 83,
+   "overview": "Moving backward on the hip with the legs doing the work: the base of the zone position, drive defense and inside water."
+  },
+  {
+   "id": "usawp-odp-7",
+   "sourceId": "usawp-odp",
+   "n": 7,
+   "title": "Water Polo: ODP ball handling drills",
+   "youtubeId": "S70sUttTx_s",
+   "duration": 162,
+   "overview": "Warm-up, station or variety work with the ball: balance, core, legs and hand-eye."
   }
  ],
  "clips": [
@@ -1315,6 +1390,584 @@
    ],
    "images": [],
    "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-17",
+   "videoId": "usawp-odp-1",
+   "title": "Why Fundamentals Win: Schroeder & Brooks",
+   "start": 17,
+   "end": 161,
+   "cues": [
+    "Balance is the most important thing in athletics.",
+    "At Partizan the best coach worked only with the 10-and-unders, on balance in the water.",
+    "The pros shoot hard because they shoot accurately, and they shoot accurately because the base is sound.",
+    "Without fundamentals the game peaks."
+   ],
+   "notes": "",
+   "tags": [
+    "talk",
+    "shooting",
+    "body-position",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-161",
+   "videoId": "usawp-odp-1",
+   "title": "Base Position: The Tripod",
+   "start": 161,
+   "end": 212,
+   "cues": [
+    "Start here every time you have the ball, whether faking, passing or shooting.",
+    "Left arm out to the left, left leg straight down, right leg slightly out to the right: a tripod.",
+    "Chest angled down, leaning forward.",
+    "Shoulders rotated 30-45° off the goal, never parallel.",
+    "Throwing shoulder pinched, elbow at ear height, wrist bent back and facing the goal."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "passing",
+    "body-position",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-212",
+   "videoId": "usawp-odp-1",
+   "title": "Common Base-Position Mistakes",
+   "start": 212,
+   "end": 264,
+   "cues": [
+    "Over-rotating with the left shoulder pointed at the goal: inconsistent release point, slower release, more time for the goalie.",
+    "Legs too far under the shooting arm: you move laterally and cannot use the body for power or vary the release.",
+    "Lying on your back: easier, but no core in the finish, so you overshoot."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "body-position",
+    "example-bad",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-264",
+   "videoId": "usawp-odp-1",
+   "title": "Legs: Lift and Rudder; Lean Forward",
+   "start": 264,
+   "end": 330,
+   "cues": [
+    "Open the legs as wide as possible.",
+    "The left leg carries the up-and-down load; the right leg is the rudder for lateral movement.",
+    "Chest faces the bottom so leg acceleration transfers forward into the shot.",
+    "Leaning forward is off balance by design; the left hand sculls to keep you from falling.",
+    "Start parallel to the goal and rotate the shoulders 30-45°."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-330",
+   "videoId": "usawp-odp-1",
+   "title": "Elbow Behind the Shoulder Line",
+   "start": 330,
+   "end": 366,
+   "cues": [
+    "Elbow at ear height, shoulder pinched, elbow always behind the line between the two shoulders.",
+    "This needs shoulder flexibility; over-rotating the body to fake it is the common error.",
+    "The wrist faces the goal wherever the arm is, so the full wrist motion is available at the end."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-366",
+   "videoId": "usawp-odp-1",
+   "title": "The Wrist: The Finish",
+   "start": 366,
+   "end": 394,
+   "cues": [
+    "The wrist faces the target at all times, from 90° back to all the way forward, and pushes through with all five fingers at once.",
+    "It sets accuracy and consistency."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-394",
+   "videoId": "usawp-odp-1",
+   "title": "Common Wrist Mistakes",
+   "start": 394,
+   "end": 418,
+   "cues": [
+    "Turning the wrist over on its side instead of facing the goal adds rotation into the motion and breaks consistency."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "example-bad",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-418",
+   "videoId": "usawp-odp-1",
+   "title": "Throwing Form at Full Speed",
+   "start": 418,
+   "end": 448,
+   "cues": [
+    "Check the start: wrist forward, elbow at the ear, left hand slightly in front, shoulder pinched, chest forward.",
+    "The base does not change until the throw starts.",
+    "Sequence: hard breaststroke kick, internal rotation of the shoulder, wrist snap and follow-through."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "breaststroke-kick",
+    "example-good",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-448",
+   "videoId": "usawp-odp-1",
+   "title": "Base-Position Drills: Walks and Markers",
+   "start": 448,
+   "end": 504,
+   "cues": [
+    "Walk 25 m and back holding the ball in base position; the position must not change, and the temptation is to over-rotate because it moves faster.",
+    "Same walk, eggbeater up and accelerate with the legs at every marker; the upper body must not move, so the legs learn to work apart from the torso.",
+    "Eggbeater down the pool at about 80%, then one hard breaststroke kick to full release height."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "eggbeater",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-504",
+   "videoId": "usawp-odp-1",
+   "title": "Internal Rotation: Steal Time from the Goalie",
+   "start": 504,
+   "end": 541,
+   "cues": [
+    "Internal rotation of the shoulder accelerates the release and adds power.",
+    "Timing is the game: accelerating at one point in the motion beats the goalie's reaction.",
+    "Isolate it before you combine it."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-541",
+   "videoId": "usawp-odp-1",
+   "title": "Internal Rotation Drill",
+   "start": 541,
+   "end": 573,
+   "cues": [
+    "Parallel to your partner, elbow at shoulder height, ball back, wrist bent.",
+    "Follow the internal rotation forward slowly until the ball touches the water in front of you; three or four reps, then pass with the same motion and full wrist extension.",
+    "Check: at the end, the elbow is not in front of the shoulder line."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-573",
+   "videoId": "usawp-odp-1",
+   "title": "Wrist Drills: Deck Release and Hand-to-Hand",
+   "start": 573,
+   "end": 612,
+   "cues": [
+    "On deck, shoulders parallel to the wall, release the ball over and over; the wrist faces the wall, bends all the way back and forward, and the release point off the fingers is the same every time.",
+    "In the water, walk down the pool eggbeatering and pass hand to hand with the wrists only; speed is irrelevant, full range and wrists facing each other are the point."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "shooting",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-1-612",
+   "videoId": "usawp-odp-1",
+   "title": "Closing: Repetition Until It Is Natural",
+   "start": 612,
+   "end": 652,
+   "cues": [
+    "Watching it and trying it twice changes nothing.",
+    "Repeat until the motion is automatic.",
+    "Body position in the water is the one fundamental that separates the best from the mediocre."
+   ],
+   "notes": "",
+   "tags": [
+    "talk",
+    "shooting",
+    "body-position",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-2-9",
+   "videoId": "usawp-odp-2",
+   "title": "ODP Eggbeater: Sitting in the Chair",
+   "start": 9,
+   "end": 80,
+   "cues": [
+    "The most fundamental movement and the base for everything else.",
+    "Start balanced: Jesse Smith looks like he is sitting in a chair.",
+    "Wide base, wide hips, hip flexibility, knees high, feet flat.",
+    "The common youth error is pointed toes, which make no force.",
+    "Eggbeater, short breaststroke kicks, and the transition between them are the foundation of all movement in the water."
+   ],
+   "notes": "",
+   "tags": [
+    "eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-3-8",
+   "videoId": "usawp-odp-3",
+   "title": "Short Fast Breaststroke Kicks at 45°",
+   "start": 8,
+   "end": 50,
+   "cues": [
+    "Chest at 45°, facing forward, hands out of the water, short fast breaststroke kicks as the only power source.",
+    "Laps of 25 m or yd with a break between, repeated.",
+    "Foundation for movement in the water and for a strong eggbeater."
+   ],
+   "notes": "",
+   "tags": [
+    "breaststroke-kick",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-3-50",
+   "videoId": "usawp-odp-3",
+   "title": "Add the Reach Lunge; Vary the Angle",
+   "start": 50,
+   "end": 112,
+   "cues": [
+    "Once the 45° kick is strong, add a reach lunge to simulate the steal, knocking a player down, and explosive defensive position.",
+    "Game use: pressing without fouling, pressure on the ball, defense with the legs.",
+    "As athletes develop, run the same kicks from horizontal and vertical positions.",
+    "Every youth practice, every week."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "breaststroke-kick",
+    "lunge",
+    "press",
+    "steal",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-4-9",
+   "videoId": "usawp-odp-4",
+   "title": "Spidering: Horizontal, Hips Above Chest",
+   "start": 9,
+   "end": 60,
+   "cues": [
+    "On the stomach, body compact, all four limbs fast: hands scull and pull, legs eggbeater.",
+    "Chest down and hips higher than the chest so the body can spring into an explosive movement at any time.",
+    "Uses: helping on a ball-side drive, helping at center, lunging into a lane for the steal, horizontal defense on the wings at the bottom line."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "body-position",
+    "sculling",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-4-60",
+   "videoId": "usawp-odp-4",
+   "title": "Spider to Reach Lunge",
+   "start": 60,
+   "end": 100,
+   "cues": [
+    "From the spider, a breaststroke kick into a lunge: pull with the hands, breaststroke kick with the legs, reach with the arm for the steal.",
+    "Three limbs together.",
+    "Repeat weekly."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "lunge",
+    "breaststroke-kick",
+    "steal",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-5-9",
+   "videoId": "usawp-odp-5",
+   "title": "Skating: Explosive 45° Glides",
+   "start": 9,
+   "end": 68,
+   "cues": [
+    "Horizontal, stomach to the bottom, hips above chest.",
+    "Reach out and glide at 45° angles, from the eggbeater into an explosive breaststroke kick, two kicks per side, and see how much ground you cover.",
+    "Kick, pull and reach at the same time.",
+    "Watch your hands as a goalkeeper watches the block.",
+    "Game use: recovering in the zone, helping on defense, helping back on the center."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "body-position",
+    "breaststroke-kick",
+    "drop",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-5-68",
+   "videoId": "usawp-odp-5",
+   "title": "Skate + Reach Lunge",
+   "start": 68,
+   "end": 103,
+   "cues": [
+    "After the 45° skate, the lead hand pulls water, the legs breaststroke-kick, and the opposite arm reach-lunges as far as possible: helping back to steal the ball from the center.",
+    "Dynamic horizontal defense."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "lunge",
+    "breaststroke-kick",
+    "steal",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-6-8",
+   "videoId": "usawp-odp-6",
+   "title": "Reverse Sculling (\"Bicycling\")",
+   "start": 8,
+   "end": 83,
+   "cues": [
+    "On the side or hip, not the chest, body in a straight line in the direction of travel, moving backward.",
+    "Legs high: lead leg at the surface, bottom leg no more than two feet down, pedaling at a high rate; the legs do the vast majority of the work.",
+    "Bottom arm pushes water, top arm pulls.",
+    "Learn it on both hips.",
+    "Basis for the zone defensive base position, drive defense and attacking inside water."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "sculling",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-7-8",
+   "videoId": "usawp-odp-7",
+   "title": "Dry-Ball Freestyle and Backstroke",
+   "start": 8,
+   "end": 47,
+   "cues": [
+    "Freestyle with the ball in front of the face on a steady short breaststroke kick.",
+    "Backstroke with the ball above the head; variant with the ball dry in front in a water polo backstroke motion.",
+    "Balance, core strength, leg strength, hand-eye coordination."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "core",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-7-47",
+   "videoId": "usawp-odp-7",
+   "title": "Ball in Hand",
+   "start": 47,
+   "end": 79,
+   "cues": [
+    "Advance with the ball gripped in the hand, as if a defender were beside you.",
+    "Not everyone can grip it; strive for it.",
+    "Short breaststroke kicks throughout.",
+    "Stop into a vertical position as in transition or counterattack, then back to ball in hand."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "counter",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-7-79",
+   "videoId": "usawp-odp-7",
+   "title": "Elbow Swim",
+   "start": 79,
+   "end": 93,
+   "cues": [
+    "Advance with the hand under the ball, not on top of it, on a short breaststroke kick."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-7-93",
+   "videoId": "usawp-odp-7",
+   "title": "Hand Transfer in Transition",
+   "start": 93,
+   "end": 117,
+   "cues": [
+    "Three or four head-up strokes with the ball, transfer from the weak hand to the strong hand above water, and immediately go vertical into a double-threat position: the counterattack with a defender closing."
+   ],
+   "notes": "",
+   "tags": [
+    "counter",
+    "ball-control",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "usawp-odp-7-117",
+   "videoId": "usawp-odp-7",
+   "title": "Pressure Passing",
+   "start": 117,
+   "end": 162,
+   "cues": [
+    "Ball behind the head, breaststroke away from the defender to protect it, then up vertical to pass or shoot away from him.",
+    "Ball above the head at all times, short breaststroke kicks, never bring it in front of the face."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "passing",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
   }
  ],
  "groups": [
@@ -1458,6 +2111,35 @@
     "kocur-2-88",
     "kocur-5-1813"
    ]
+  },
+  {
+   "id": "odp-fundamentals",
+   "title": "ODP fundamentals — base position and movement",
+   "level": "all",
+   "hidden": false,
+   "description": "USA Water Polo ODP's fundamentals: the base position for passing and shooting (Schroeder/Brooks), and the six movements every session should touch — eggbeater, short breaststroke kicks, spidering, skating, reverse sculling, ball handling.",
+   "clipIds": [
+    "usawp-odp-2-9",
+    "usawp-odp-3-8",
+    "usawp-odp-3-50",
+    "usawp-odp-4-9",
+    "usawp-odp-4-60",
+    "usawp-odp-5-9",
+    "usawp-odp-5-68",
+    "usawp-odp-6-8",
+    "usawp-odp-1-161",
+    "usawp-odp-1-264",
+    "usawp-odp-1-330",
+    "usawp-odp-1-366",
+    "usawp-odp-1-418",
+    "usawp-odp-1-448",
+    "usawp-odp-1-541",
+    "usawp-odp-1-573",
+    "usawp-odp-7-8",
+    "usawp-odp-7-47",
+    "usawp-odp-7-93",
+    "usawp-odp-7-117"
+   ]
   }
  ],
  "practices": [
@@ -1515,6 +2197,18 @@
      "images": []
     }
    ]
+  }
+ ],
+ "guides": [
+  {
+   "id": "centeroffense-moodykeys",
+   "title": "Center offense - the Moody keys",
+   "category": "centers",
+   "subtitle": "Heather Moody's keys to the 2 m position, rewritten for St. X centers. Tap any timestamp to jump the player there.",
+   "video": "7QpmV2ELq4Y",
+   "source": "For St. X centers. Built 2026-09-10 by the Water Polo build chat from the transcript of \"Water Polo: Center Offense Video USAWP Heather Moody\" (24:22, YouTube `7QpmV2ELq4Y`, Peter Zamoyski's edit of Heather Moody's talk at the USA Water Polo winter meetings; Moody - Olympic gold 2012). The video's auto-captions are rough (\"sinner\" = center, \"Lake strength\" = leg strength); the wording below is a coach's rewrite, not a quote. Timestamps are for the clips worth actually watching.",
+   "body": "**Five minutes to read. Then tap the four timestamps marked WATCH - the clips total under four minutes.**\n\n---\n\n## 1. What a good center is made of `0:32`\n- **Legs.** You hold a defender up for the whole possession. No legs, no position.\n- **Vision.** Know where the ball is the entire time and adjust before it moves, not after.\n- **Patience.** Sometimes the ball cannot come in. Hold, wait, then attack the one window you get.\n- **Play in the now.** Bad call, offensive foul, turnover - flush it and chase. A center who pouts for two seconds is a center who gives up a counter goal.\n- **Controlled intensity.** Know when to be violent and when to be still.\n- **Mental toughness.** A tight-called game, or a team that zones all night - you can play a whole game and never touch the ball. That is still your job.\n\n## 2. Your two jobs `2:13`\n1. **Gain ball side.** Your perimeter has to get the ball to the side you want to hold. Until then, you are setting up.\n2. **Keep ball side.** Once the ball is there, holding it is on you. When the ball comes in: **explode to it.** That move gets the referee's attention (exclusion or foul), gets the separation, or gets the shot. A casual reach gets nothing.\n\n## 3. Where you are `3:33`\nKnow your spot in front of the cage without looking. Shots go outside the post because the center did not know where he was. **Ideal: on the 3 m line, center cage.** You won't always get it, but that is what you are fighting for.\n\n## 4. The chair - your base position `3:58` **WATCH**\nEverything at center starts from here.\n- **Sit in a chair.** Knees high, hips directly under you - not in front, not behind.\n- **Hip bones to rib cage.** Squish them together. That curves your back the right way and rolls your shoulders forward.\n- **Chin on your chest.** This is what stops the offensive foul - you never throw your head back, and when you snap, everything goes forward to the ball.\n- **Shoulders out of the water.** Show the referee what the defender is doing to you.\n- **Elbows high, level with your shoulders.** It makes you *wide*. A narrow center gets swum around. Wide, you cover your water and can dip and slide to cover more.\n- **Hands sculling.**\n\nWhy the chair: you can hold this position all possession, and you snap and separate off it at a higher rate because you are over your legs.\n\n## 5. Keep contact - you want his chest `2:52`\nBall-side position is established and kept by **keeping contact with the defender.** You want his chest on your back: you feel where he is about to move or jump and you counter it. If he has separation and only hands on your back, you can't read him.\n\n## 6. The face-to-face start `6:57`\nMost teams press. To save your legs, start **face to face**: arm to arm with the defender, **grip at his bicep/tricep**, and **keep space** between you.\n- Not tight. Tight puts your hips on already, kills your snap into him, and turns it into a wrestling match.\n- With space, when you go, you get momentum into him and he has to back off and reposition.\n- **Use your off hand.** Most players turn slowly and lazily and the defender resets in a second. Inside arm goes to work aggressively, then the roadblock goes up (next section).\n- You can sit here as long as the ball is on the far side. Conserve energy.\n\n## 7. Turn, spin, seal `9:03` **WATCH**\nThe technique of the position. **Powerful and explosive** - you are driving into the defender to steal an inch of water and make him backpedal. Do it casually and he repositions or jumps back in front.\n- **Turn.** Cage is behind you, ball is on one side. Your **inside arm** (the ball-side arm) goes to the **defender's outside armpit**. Pull him, put your shoulder into that armpit.\n- **Spin.** Your shoulder is the navigator. **Put up the roadblock** - your body across his path so he cannot get back in front. Now the order is ball - you - defender. That water in front of you is yours.\n- **Seal.** Back into the center spot, into your chair, ball side maintained.\n- **Control him from armpit to hip.** Hand on that line; if he moves left, hook a little under the armpit and bring your chair with you, so if the ball comes you can still react.\n- **The window is 3-5 seconds** from the ball reaching your side. Be explosive inside it. If it closes - zone, no entry - hold the chair and work on spreading the zone.\n- **Anticipate the entry.** Know your passers. When you see it coming, snap to it and you get the separation.\n\n## 8. Getting pushed out `5:38` **WATCH**\nHips down and vertical. If you go horizontal you lose - he pushes you off your spot. When he has your full back to push on, or you're losing contact:\n- **Quarter turn.** Wide to narrow - now he only has a shoulder to push against.\n- **Explosive breaststroke kick**, dive back in under his armpit, bring him with you.\n- **Snap your shoulders square and re-set the chair.** You keep your water.\nDon't turn and swim. Quarter turn, kick, dive back.\n\n## 9. Fronted on the counter `12:38` **WATCH**\nYou come down the pool and the defender is waiting in front.\n- **Get to 2 m, a little deep.** Let him take the front.\n- **Move him out at 45°.** Never strength on strength straight back - you go nowhere. At 45° he often doesn't feel how far he's going, and now the ball can land where you have inside water. Ball comes to your side: inside arm, outside armpit, turn-spin-seal.\n- **If the ball is already deep when you arrive, stop early** and go to work right there.\n- **If he over-anticipates the pass** (jumps early): a quick **crossover**, dip back to the 45°, and he's beaten.\n- **If he drifts too far from the goal or comes back inside to push:** **spin back toward the cage** to seal him off and keep ball side.\n- **If he's quicker than your spin:** match his stroke, then take the hand closest to the ball and spin in. Always the roadblock.\n\n## 10. Drawing the foul `17:08`\n- **Hips stay underneath.** Defenders push your hips out of position. Answer with **one quick breaststroke kick** to drive them back - not a steady kick. Rhythm lets him time the jump around you.\n- **Absorb the contact.** A lot of it happens underwater and gets no call. Keep your head up so you still know where the ball is.\n- **Snap to the ball.** The thing even national teams struggle with. From the chair: drive your **left shoulder into his chest** (arms get a shoulder's length longer), **step with the right leg** (left if you're a lefty), scoop water. It makes the referee look, exposes what he's doing, and opens the shooting lane.\n- **Take the chair with you.** Most centers snap without their base and there's nothing behind it. If he over-commits, you have no legs to finish the shot.\n\n## 11. Shooting `18:59`\n- **Where the defender is dictates the shot.** Behind you, fronting, on a side - each has its shot.\n- **Where you are dictates the shot.** A quarter turn at 5 m is a hard finish. The same thing at 2 m is high percentage.\n- **Know the pass.** Some come to your face, some are short, some you catch out of the air. Watch it in, control it - a bad pass doesn't have to be a turnover.\n\n## 12. Against a zone `20:10`\nYou turn-spin-seal and they drop. Fine - the defense just honored you. Now your job is to **disrupt the zone**: **move across the cage**, not straight back to 2 m. Make the droppers follow you so your perimeter can see how far they really go. If someone crashes, you see it from your chair because you're on your legs - snap away from it and the ball is free.\n\n## 13. Breaking the hold `21:09`\n- **Quarter turn** exposes the suit grab to the referee; then dive back to position. If he still has it, spin back to face-to-face for a beat and go again.\n- **Low hip grab:** spin away and drop the forearm - it breaks the hold, you separate, then get back.\n- **In face-to-face and he's holding:** a quick **barrel roll toward his outside elbow.** He either lets go or it hurts. Don't sit there and hold back.\n- **Don't jump and flail at the referee.** You lose your momentum and your position; the call may not come; and you've stopped working with your perimeter.\n\n## 14. Look like the victim `23:04`\nBig centers: sit a little lower in the water. Never look like the aggressor even when you are controlling everything.\n\n---\n\n## The card (memorize this)\n1. **Chair:** knees high, hips under, chin down, shoulders out, elbows wide, hands sculling.\n2. **His chest on your back.** Feel him.\n3. **Face to face, arm to arm, with space.** Save your legs.\n4. **Ball to your side = 3-5 seconds.** Inside arm to outside armpit. Turn, spin, roadblock, seal.\n5. **Pushed out:** quarter turn, one kick, dive back, square up.\n6. **Fronted:** 45°, never straight back.\n7. **Snap to the ball with your chair.** Left shoulder in, right leg steps.\n8. **Bad call? Flush it. Chase.**\n\n*Watch order if you only watch four: 4 → 7 → 8 → 9.*",
+   "file": "PB.03_Guide_CenterOffense_MoodyKeys_2026-09-10.md"
   }
  ]
 }

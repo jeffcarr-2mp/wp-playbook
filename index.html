@@ -44,7 +44,9 @@
   .top{position:sticky; top:0; z-index:5; background:var(--surface); border-bottom:1px solid var(--line); padding:8px 14px calc(0px + env(safe-area-inset-top)); padding-top:calc(8px + env(safe-area-inset-top)); display:flex; align-items:center; gap:12px}
   .top img{height:32px; width:32px; border-radius:6px; background:#fff}
   .top h1{color:var(--home)} .top h1 span{color:var(--muted); font-weight:500}
-  nav{display:flex; gap:2px; margin-left:auto}
+  nav{display:flex; gap:2px; margin-left:auto; min-width:0; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch} nav::-webkit-scrollbar{display:none} nav button{flex:0 0 auto}
+  @media (max-width:520px){ .top{flex-wrap:wrap; row-gap:2px; padding-bottom:4px} nav{flex:1 0 100%; margin-left:0; justify-content:space-between} nav button{padding:6px 6px; font-size:13px; letter-spacing:.03em} }
+  @media (max-width:400px){ nav button{font-size:12px; padding:6px 4px; letter-spacing:.02em} }
   nav button{border:0; background:transparent; padding:8px 12px; font-family:var(--head); text-transform:uppercase; letter-spacing:.06em; font-size:14px; color:var(--muted); border-radius:6px}
   nav button.on{color:var(--home); background:var(--home-soft)}
   .coachbar{background:var(--warn-soft); color:var(--warn); border-bottom:1px solid var(--line); padding:6px 14px; font-size:13px; display:none; gap:10px; align-items:center; flex-wrap:wrap}
@@ -99,6 +101,11 @@
   .block p{margin:6px 0; font-size:15px}
   .block img,.now img{max-width:100%; border-radius:8px; border:1px solid var(--line); margin-top:8px}
   .eyebrow{font-family:var(--head); text-transform:uppercase; letter-spacing:.1em; font-size:12px; color:var(--muted)}
+  .guide h3{margin:18px 0 6px; font-size:16px; color:var(--home); display:flex; gap:8px; align-items:baseline; flex-wrap:wrap} .guide h4{margin:14px 0 4px}
+  .guide p{margin:6px 0; font-size:15px} .guide ul,.guide ol{margin:6px 0 8px 20px; font-size:15px} .guide li{margin:3px 0} .guide hr{border:0; border-top:1px solid var(--line-soft); margin:16px 0}
+  .guide .sub{color:var(--ink-2); font-size:15px; margin:4px 0 10px} .guide .srcnote{color:var(--muted); font-size:12px; margin-top:18px; border-top:1px solid var(--line-soft); padding-top:10px}
+  button.ts{font-family:var(--mono); font-size:12px; padding:1px 8px; border-radius:999px; border:1px solid var(--home); color:var(--home); background:var(--home-soft)} button.ts.on{background:var(--home); color:#fff}
+  .glist .g{display:flex; gap:10px; align-items:baseline; padding:10px 6px; border-top:1px solid var(--line-soft); cursor:pointer} .glist .g:first-child{border-top:0} .glist .g .t{font-weight:600} .glist .g .m{color:var(--muted); font-size:13px}
   .kicker{display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap}
   .plist .p{display:flex; gap:12px; align-items:baseline; padding:10px 6px; border-top:1px solid var(--line-soft); cursor:pointer}
   .plist .p:hover{background:var(--surface-2)}
@@ -124,7 +131,7 @@
   <img id="brandmark" alt="St. Xavier" src="icon-180.png" onerror="this.style.display='none'">
   <h1>ST X <span>Playbook</span></h1>
   <nav id="nav">
-    <button data-v="today">Today</button><button data-v="library">Library</button><button data-v="practices">Practices</button><button data-v="search">Search</button>
+    <button data-v="today">Today</button><button data-v="library">Library</button><button data-v="practices">Practices</button><button data-v="search">Search</button><button data-v="guides">Guides</button>
   </nav>
 </div>
 <div class="coachbar" id="coachbar">
@@ -158,8 +165,11 @@ const parseTime=t=>{ if(typeof t==='number') return t; const p=String(t).trim().
 // tiny markdown: paragraphs, **b**, *i*, `c`, - lists, [t](u), line breaks
 function md(src){ if(!src) return ''; const lines=esc(src).split('\n'); let out='', list=false;
   const inl=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>').replace(/`(.+?)`/g,'<code>$1</code>').replace(/\[(.+?)\]\((https?:[^\s)]+|#[^\s)]+)\)/g,'<a href="$2">$1</a>');
-  for(const l of lines){ if(/^\s*[-*] /.test(l)){ if(!list){out+='<ul>'; list=true;} out+='<li>'+inl(l.replace(/^\s*[-*] /,''))+'</li>'; continue; } if(list){out+='</ul>'; list=false;} if(!l.trim()){continue;} out+='<p>'+inl(l)+'</p>'; }
-  if(list) out+='</ul>'; return out; }
+  const close=()=>{ if(list){ out+=list==='ol'?'</ol>':'</ul>'; list=false; } };
+  for(const l of lines){ if(/^\s*[-*] /.test(l)){ if(list!=='ul'){ close(); out+='<ul>'; list='ul'; } out+='<li>'+inl(l.replace(/^\s*[-*] /,''))+'</li>'; continue; }
+    if(/^\s*\d+\. /.test(l)){ if(list!=='ol'){ close(); out+='<ol>'; list='ol'; } out+='<li>'+inl(l.replace(/^\s*\d+\. /,''))+'</li>'; continue; }
+    close(); if(!l.trim()){continue;} const h=/^(#{2,4}) (.+)$/.exec(l); if(h){ const n=h[1].length+1; out+='<h'+n+'>'+inl(h[2])+'</h'+n+'>'; continue; } if(/^-{3,}\s*$/.test(l)){ out+='<hr>'; continue; } out+='<p>'+inl(l)+'</p>'; }
+  close(); return out; }
 
 // ---------- state ----------
 let D=null;              // playbook data (base + draft applied)
@@ -238,7 +248,8 @@ function renderNow(ended){ const box=$('#now'); if(!cur){ box.innerHTML='<span c
 function highlight(){ $$('.clip').forEach(el=>el.classList.toggle('playing', el.dataset.id===cur)); }
 
 // ---------- views ----------
-function setView(v){ view=v; $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v)); render(); }
+const navOn=()=>{ $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===view||(view==='guide'&&b.dataset.v==='guides')||(view==='practice'&&b.dataset.v==='practices'))); try{ const on=$('#nav button.on'); if(on&&on.scrollIntoView) on.scrollIntoView({inline:'nearest',block:'nearest'}); }catch(e){} };
+function setView(v){ view=v; navOn(); render(); }
 $('#nav').addEventListener('click',e=>{ const b=e.target.closest('button[data-v]'); if(b){ tagFilter=null; setView(b.dataset.v); if(!location.hash.startsWith('#coach')) history.replaceState(null,'','#v='+b.dataset.v); } });
 PB.byTag=t=>{ tagFilter=t; q=''; setView('search'); };
 function clipRow(c,i,extra){ const v=video(c.videoId); return `<div class="clip${c.id===cur?' playing':''}${c.hidden?' muted':''}" data-id="${c.id}" onclick="PB.play('${c.id}')">
@@ -260,6 +271,9 @@ function render(){ const m=$('#main'); if(!D){ m.innerHTML='<div class="empty">L
     m.innerHTML=`<div class="card"><h2>Practice plans</h2><div class="plist">${ps.map(p=>`<div class="p" onclick="PB.openPractice('${esc(p.id)}')"><span class="d">${esc(p.date)}</span><span>${esc(p.title)}${p.published?'':' <span class="small warn">(draft)</span>'}</span><span class="muted small" style="margin-left:auto">${p.blocks.length} blocks · ${p.blocks.reduce((a,b)=>a+(+b.minutes||0),0)} min</span></div>`).join('')||'<div class="empty">None yet.</div>'}</div></div>`; }
   else if(view==='practice'){ const p=byId(D.practices,PB._p); m.innerHTML=p?`<button class="ghost small" onclick="PB.nav('practices')">← All practices</button>`+practiceHtml(p,false):'<div class="empty">Not found.</div>'; if(coach&&p) wirePracticeEditor(p); }
   else if(view==='clipper'){ m.innerHTML=clipperHtml(); wireClipper(); }
+  else if(view==='guides'){ const gs=D.guides||[]; const cats=[...new Set(gs.map(g=>g.category))];
+    m.innerHTML=cats.map(cat=>`<div class="card"><h2>${esc(cat.charAt(0).toUpperCase()+cat.slice(1))}</h2><div class="glist">${gs.filter(g=>g.category===cat).map(g=>`<div class="g" onclick="PB.openGuide('${esc(g.id)}')"><div><div class="t">${esc(g.title)}</div><div class="m">${esc(g.subtitle||'')}</div></div><span class="muted small" style="margin-left:auto">${g.video?'▶ clips':''}</span></div>`).join('')}</div></div>`).join('')||'<div class="card"><h2>Guides</h2><div class="desc">None posted yet.</div></div>'; }
+  else if(view==='guide'){ const g=byId(D.guides||[],PB._g); m.innerHTML=g?`<button class="ghost small" onclick="PB.nav('guides')">← All guides</button>`+guideHtml(g):'<div class="empty">Not found.</div>'; }
   else if(view==='search'){ const terms=q.toLowerCase().split(/\s+/).filter(Boolean);
     const hits=visibleClips().filter(c=>(!tagFilter||c.tags.includes(tagFilter))&&terms.every(t=>(c.title+' '+(c.cues||[]).join(' ')+' '+(c.notes||'')+' '+c.tags.join(' ')+' '+(video(c.videoId)||{}).title).toLowerCase().includes(t)));
     m.innerHTML=`<div class="card"><div class="filters"><input id="q" placeholder="Search drills, cues, tags…" value="${esc(q)}" autocomplete="off">${tagFilter?`<button class="chip on" onclick="PB.byTag(null)">${esc(tagFilter)} ✕</button>`:''}</div>
@@ -270,6 +284,12 @@ function render(){ const m=$('#main'); if(!D){ m.innerHTML='<div class="empty">L
 PB.setLevel=l=>{ level=l; render(); };
 PB.nav=v=>setView(v);
 PB.openPractice=id=>{ PB._p=id; setView('practice'); if(!location.hash.startsWith('#coach')) history.replaceState(null,'','#practice='+id); };
+PB.openGuide=id=>{ PB._g=id; setView('guide'); if(!location.hash.startsWith('#coach')) history.replaceState(null,'','#guide='+id); try{ window.scrollTo(0,0); }catch(e){} };
+// a guide is markdown; a backtick m:ss inside it becomes a button that jumps the player to that point of the guide's video
+function guideHtml(g){ let body=md(g.body); if(g.video) body=body.replace(/<code>(\d{1,2}:\d\d)<\/code>/g,(m,t)=>`<button class="ts" onclick="PB.playRaw('${esc(g.video)}',${parseTime(t)},0,${JSON.stringify(g.title).replace(/"/g,'&quot;')})">▶ ${t}</button>`);
+  return `<div class="card guide" id="gd-${esc(g.id)}"><div class="eyebrow">${esc(g.category)} · guide</div><h2 style="margin-top:4px">${esc(g.title)}</h2>${g.subtitle?`<div class="sub">${md(g.subtitle)}</div>`:''}${body}${g.source?`<div class="srcnote">${md(g.source)}</div>`:''}
+   <div class="row" style="margin-top:12px"><button onclick="PB.shareGuide('${esc(g.id)}')">Share this guide</button></div></div>`; }
+PB.shareGuide=async id=>{ const url=location.origin+location.pathname+'#guide='+id; try{ if(navigator.share) await navigator.share({title:byId(D.guides,id).title, url}); else { await navigator.clipboard.writeText(url); toast('Link copied'); } }catch(e){} };
 function practiceHtml(p,isToday){ const total=p.blocks.reduce((a,b)=>a+(+b.minutes||0),0);
   return `<div class="card" id="p-${esc(p.id)}"><div class="eyebrow">${isToday?(p.date===today()?'Today':p.date>today()?'Next practice':'Most recent'):'Practice plan'} · ${esc(p.date)}${p.published?'':' · <span class="warn">draft</span>'}</div>
    <div class="kicker"><h2 style="margin-top:4px">${esc(p.title)}</h2><span class="mono small muted">${total} min · ${p.blocks.reduce((a,b)=>a+b.clipIds.length,0)} clips</span></div>
@@ -352,7 +372,7 @@ let clipVid=null;
 PB.clipper=()=>{ view='clipper'; $$('#nav button').forEach(b=>b.classList.remove('on')); render(); };
 function clipperHtml(){ const v=clipVid?video(clipVid):null; const draft=PB._cd||{start:null,end:null,title:'',tags:['stx','drill','all']};
   return `<div class="card"><h2>Clip from YouTube</h2><div class="desc">Paste a video, play it in the player, tap <b>Set start</b> and <b>Set end</b> while you watch, name it, tag it, add. It joins the library like any other clip — no download.</div>
-  <div class="ed"><div class="r"><label>YouTube URL or ID<input id="clUrl" value="${esc(v?v.youtubeId:'')}" placeholder="https://www.youtube.com/watch?v=…"></label><label style="flex:0 0 160px">Source<select id="clSrc">${D.sources.filter(s=>s.id!=='kocur').map(s=>`<option value="${s.id}" ${v&&v.sourceId===s.id?'selected':''}>${esc(s.title)}</option>`).join('')}</select></label><label>Video title<input id="clVt" value="${esc(v?v.title:'')}" placeholder="8/27/26 CCHS vs Newport"></label><button id="clLoad" class="pri">Load</button></div>
+  <div class="ed"><div class="r"><label>YouTube URL or ID<input id="clUrl" value="${esc(v?v.youtubeId:'')}" placeholder="https://www.youtube.com/watch?v=…"></label><label style="flex:0 0 160px">Source<select id="clSrc">${D.sources.filter(s=>!s.indexed&&s.id!=='kocur').map(s=>`<option value="${s.id}" ${v&&v.sourceId===s.id?'selected':''}>${esc(s.title)}</option>`).join('')}</select></label><label>Video title<input id="clVt" value="${esc(v?v.title:'')}" placeholder="8/27/26 CCHS vs Newport"></label><button id="clLoad" class="pri">Load</button></div>
   ${v?`<div class="r"><button id="clS">Set start (now)</button><span class="mono" id="clSv">${draft.start!=null?mmss(draft.start):'—'}</span><button id="clE">Set end (now)</button><span class="mono" id="clEv">${draft.end!=null?mmss(draft.end):'—'}</span><button id="clPrev" ${draft.start==null||draft.end==null?'disabled':''}>Preview</button></div>
   <div class="r"><label>Clip title<input id="clT" value="${esc(draft.title)}" placeholder="Newport 6-on-5: 4-2 weak-side shot"></label></div>
   <label>How we use it (markdown, optional)<textarea id="clN">${esc(draft.notes||'')}</textarea></label>
@@ -376,10 +396,11 @@ let tt; function toast(m){ let t=$('#toast'); if(!t){ t=document.createElement('
 function route(){ const h=location.hash.replace(/^#/,''); const params=Object.fromEntries(h.split('&').filter(Boolean).map(kv=>{ const [k,v]=kv.split('='); return [k, v===undefined?'1':decodeURIComponent(v)]; }));
   if('coach' in params){ PB.setCoach(true); }
   if(params.practice){ PB._p=params.practice; view='practice'; }
+  else if(params.guide){ PB._g=params.guide; view='guide'; }
   else if(params.v){ view=params.v; }
   else if(params.clip){ view=params.v||'library'; }
   else if(params.group){ view='library'; }
-  $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===view)); render();
+  navOn(); render();
   if(params.clip&&clip(params.clip)) playClip(params.clip);
   if(params.group){ setTimeout(()=>{ const el=document.getElementById('g-'+params.group); if(el) el.scrollIntoView(); },50); } }
 window.addEventListener('hashchange',()=>{ if(location.hash.startsWith('#coach')||location.hash===''&&coach) return; route(); });
