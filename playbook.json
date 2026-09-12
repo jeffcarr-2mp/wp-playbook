@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-09-10",
+ "updated": "2026-09-12",
  "team": {
   "name": "St. Xavier Water Polo",
   "short": "ST X"
@@ -341,7 +341,7 @@
    "videoId": "kocur-1",
    "title": "Resistance Band Shoulder Prehab Routine",
    "start": 422,
-   "end": 660,
+   "end": 690,
    "cues": [
     "15 min before every water workout.",
     "Scarecrow row; elbow-pinned internal/external rotations at steady cadence; standing fake-throw with core rotation; triceps snap-through."
@@ -350,6 +350,445 @@
    "tags": [
     "dryland",
     "bands",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-690",
+   "videoId": "kocur-1",
+   "title": "Dryland Before the Water: Push-Up Variations",
+   "start": 690,
+   "end": 748,
+   "cues": [
+    "10-15 minutes before every water session: push-ups, sit-ups, squats, pull-ups, planks.",
+    "Push-up: body flat, no bottom in the air, no sagging back.",
+    "Hand positions - wide, narrow (triceps), one high one low - ten of each; in the game your pushing hand is never in the same place."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "core",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-748",
+   "videoId": "kocur-1",
+   "title": "Core: Taco, Bicycle, Flutter, Scissor, Six Inches",
+   "start": 748,
+   "end": 813,
+   "cues": [
+    "Taco: legs and upper body up together, pivot on the hip bone, don't push off the hand on the ground - stomach does the work; the hardest sit-up there is.",
+    "Bicycle: arms and legs as pistons, right to left.",
+    "Legs and arms up together pivoting on the lower back. 20-30 seconds each, move on.",
+    "Flutter kick, scissor kick, or hold six inches off the ground."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "core",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-813",
+   "videoId": "kocur-1",
+   "title": "Air Squats",
+   "start": 813,
+   "end": 854,
+   "cues": [
+    "Exactly what an eggbeater looks like underwater: knees up into the groin, wide frame, great foundation.",
+    "No weight room - do many.",
+    "Knees never past the toes, lower back flat as if sitting into a chair, head up.",
+    "Deep squats past 90° only if you can."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-854",
+   "videoId": "kocur-1",
+   "title": "One-Legged Lunges",
+   "start": 854,
+   "end": 899,
+   "cues": [
+    "Alternate, or ten in a row on one leg.",
+    "Reach as far as possible; front knee not past the toes; back knee within a half inch to an inch of the ground; back stiff and still, upper body vertical, no hunching over the stepping knee."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-899",
+   "videoId": "kocur-1",
+   "title": "The Genie",
+   "start": 899,
+   "end": 916,
+   "cues": [
+    "Air squat plus explosion: deep squat to a vertical jump, snapping off the toes, as high as you can."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-916",
+   "videoId": "kocur-1",
+   "title": "Planks and Variations",
+   "start": 916,
+   "end": 1005,
+   "cues": [
+    "Hands or elbows (the thinkers); body straight, no arch, bottom neither up nor down.",
+    "Alternate one hand off the ground; opposite arm and leg; advanced: same arm, same leg.",
+    "Side planks with one leg and one arm elevated - shoulder strength without strain.",
+    "A stronger core prevents injuries in the limbs."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "core",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1005",
+   "videoId": "kocur-1",
+   "title": "Back Extensions; Build a Full Dryland",
+   "start": 1005,
+   "end": 1086,
+   "cues": [
+    "Back injuries are common in the sport; extensions strengthen around the vertebrae.",
+    "Alternate arms and legs, then both.",
+    "Combine push-ups, squats, one-legged lunges and sit-ups into one whole-body block; 20-25 minutes on land before the water, some breaking a sweat.",
+    "It prevents injury and readies the body for the skills."
+   ],
+   "notes": "",
+   "tags": [
+    "dryland",
+    "core",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1086",
+   "videoId": "kocur-1",
+   "title": "Swim Conditioning: Fly-Free, Vertical Fly, Vertical Breast",
+   "start": 1086,
+   "end": 1173,
+   "cues": [
+    "Fly-free: butterfly arms with a strong freestyle kick, upper body out of the water.",
+    "Vertical fly: two breaststroke kicks (one short and quick, one long and powerful) to one pull, ribcage out of the water.",
+    "Vertical breast: both arms push down toward the waist, elevate a half hitch higher; double kick, then kick out horizontal and glide."
+   ],
+   "notes": "",
+   "tags": [
+    "sprint",
+    "eggbeater",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1173",
+   "videoId": "kocur-1",
+   "title": "Head-Up Flutter Kick; Five Strokes to a 360",
+   "start": 1173,
+   "end": 1221,
+   "cues": [
+    "Flutter kick head up, hands sculling out front, chest as high as possible, feet exiting the water and whitewater behind - the most unused drill in the game.",
+    "Five hard head-up strokes, horizontal to vertical, propel out of the water into a full 360; alternate left and right; surface with the head above water so the game is still in front of you."
+   ],
+   "notes": "",
+   "tags": [
+    "sprint",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1221",
+   "videoId": "kocur-1",
+   "title": "Suicides With Variations",
+   "start": 1221,
+   "end": 1361,
+   "cues": [
+    "Basketball suicides in the pool, before games and practice: change of direction with a variation in the middle.",
+    "Reach-stroke lunge as if knocking someone down; head-up swim like a counter; field-block position - rotate over the hips, step with the leading hand into the water, lean on it and elevate, walk out four or five meters and finish with a big lunge.",
+    "Out of the water at each end for push-ups, sit-ups, air squats.",
+    "Five hard head-up freestyle into five lunges and back. 100% - the game is too fast for a slow-twitch player."
+   ],
+   "notes": "",
+   "tags": [
+    "sprint",
+    "counter",
+    "lunge",
+    "block",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1361",
+   "videoId": "kocur-1",
+   "title": "Band Work: Swim, Eggbeater and Breaststroke Kick Through Resistance",
+   "start": 1361,
+   "end": 1473,
+   "cues": [
+    "Torture for players, entertainment for coaches.",
+    "Swim out against the band for a minute, cycling freestyle kick, breaststroke kick and eggbeater: learn to swim through being held, grabbed or pushed under and keep the arms going so the referee sees it.",
+    "Eggbeater on the band: frame and leg strength; resistance grows the further you go, pushing past the threshold - goalies, 2 m defenders and centers most of all.",
+    "Breaststroke kick on the band too: as much of our game as the eggbeater."
+   ],
+   "notes": "",
+   "tags": [
+    "bands",
+    "eggbeater",
+    "breaststroke-kick",
+    "wrestling",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1473",
+   "videoId": "kocur-1",
+   "title": "Band Work: Faking in the Tripod; Kick With the Ball; Dives",
+   "start": 1473,
+   "end": 1602,
+   "cues": [
+    "Ball in hand on the band: fake from a shooting position, tripod with the leading hand sculling and the legs driving forward, 15-30 seconds; wears them down now, pays off in the fourth quarter.",
+    "Leading shoulder stays out of the water - the leading hand sculls it up.",
+    "Breaststroke kick with the ball against the band: moving into open pockets to make or re-make shooting lanes.",
+    "Dives on the band: vertical to horizontal, snap the legs under, chest out, big fake, drop and kick into the next pocket."
+   ],
+   "notes": "",
+   "tags": [
+    "bands",
+    "fake",
+    "dive",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1602",
+   "videoId": "kocur-1",
+   "title": "Dive Forward, Step Back",
+   "start": 1602,
+   "end": 1668,
+   "cues": [
+    "Dive into the open water in front of you with the leading hand, vertical to horizontal with a breaststroke kick; one forward, one back.",
+    "Underwater: straight vertical tripod to an elongated horizontal, then legs snapped back under to hold the vertical.",
+    "Ball stays dry - the moment it enters the water a defender can jump you."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "dive",
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1668",
+   "videoId": "kocur-1",
+   "title": "Fake Forward, Step Back (vs Zone or Split)",
+   "start": 1668,
+   "end": 1753,
+   "cues": [
+    "Attack the defense; when the defender jumps out, keep the ball live and step back to absorb or anticipate the jump, then immediately re-attack.",
+    "Split eggbeater snaps hips back into a protecting position, knees back in to return to vertical; the tripod hand buys the half inch to pass over or around him.",
+    "Diving forward finds open pockets and new lanes - the defense can't move as fast as your kick.",
+    "After every dive get back past the ribcage and make the defense honor you before the next move."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "dive",
+    "fake",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1753",
+   "videoId": "kocur-1",
+   "title": "Walking Tripod With a Weighted Ball",
+   "start": 1753,
+   "end": 1901,
+   "cues": [
+    "Ribcage out, leading hand sculling out front to protect you; leading leg directly under the left shoulder for balance; back (right) leg pushing forward, keeping you in the attack.",
+    "Bad clips: leaning too far forward, sculling hand not keeping the shoulder up, leading leg behind - faster, but no height.",
+    "Add a small rhythm fake to stay in control and balanced; lift the tripod hand out of the water to force the legs to hold you vertical.",
+    "Knees wide and high - the legs feed the wolf: strong legs give you vision over everyone."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "eggbeater",
+    "body-position",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1901",
+   "videoId": "kocur-1",
+   "title": "Heavy Ball: 40/20 and the Explosion Drill",
+   "start": 1901,
+   "end": 1985,
+   "cues": [
+    "Heavy ball or weight belt to push the legs.",
+    "Knees high and wide, 40 seconds on, 20 off.",
+    "Advanced: a big breaststroke kick explosion out of the water every 5-10 seconds, 30/30 or 40/20, 10-12 rounds; both legs generate force and a big kick lifts the torso."
+   ],
+   "notes": "",
+   "tags": [
+    "eggbeater",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-1985",
+   "videoId": "kocur-1",
+   "title": "Heavy Ball to Sprint",
+   "start": 1985,
+   "end": 2048,
+   "cues": [
+    "Wrestle the ball up for 10-20 seconds, straight into a 25 or 50 head-up freestyle sprint - the game goes from wrestling to sprinting.",
+    "No heavy ball: partner up and wrestle into the sprint.",
+    "Breaststroke kick launches the swim; head up through the change of direction; kick hard - the arms are the boat and the wheel, the legs are the motor."
+   ],
+   "notes": "",
+   "tags": [
+    "wrestling",
+    "sprint",
+    "counter",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2048",
+   "videoId": "kocur-1",
+   "title": "Heavy Ball Shooting, Fatigued",
+   "start": 2048,
+   "end": 2141,
+   "cues": [
+    "Heavy ball over the head 15-20 seconds, then throw it as hard as you can and receive six balls to shoot; or a leg set with the heavy ball, then dry receive horizontal to vertical to shoot, four to six shots.",
+    "Proper body position while tired: the fourth-quarter shot has to be as good as the first.",
+    "Buy one; use it every day in passing, shooting and legs."
+   ],
+   "notes": "",
+   "tags": [
+    "shooting",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2141",
+   "videoId": "kocur-1",
+   "title": "Wrestle-Swim and Grind-Out",
+   "start": 2141,
+   "end": 2241,
+   "cues": [
+    "Wrestle 10-20 seconds for position, controlling elbows and arms, then an immediate 15, 25 or 50 m head-up sprint, back to wrestling.",
+    "Grind-out swim: cutting each other off, barreling down the pool - more aggressive than a game while staying clean.",
+    "Jump back on each other the moment you return; be a step ahead mentally.",
+    "Watch the underwater physicality and leg work."
+   ],
+   "notes": "",
+   "tags": [
+    "wrestling",
+    "sprint",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-1-2241",
+   "videoId": "kocur-1",
+   "title": "Push War",
+   "start": 2241,
+   "end": 2289,
+   "cues": [
+    "Arms locked at the shoulders, facing each other, pushing with a horizontal eggbeater for 10-15 seconds; release, separate 4-5 m, and go straight into a defensive skill - KO lunge, field block, or a reach-freestyle sprint back.",
+    "Legs from pushing to defense without a break."
+   ],
+   "notes": "",
+   "tags": [
+    "wrestling",
+    "eggbeater",
+    "defense",
+    "lunge",
     "drill",
     "all"
    ],
@@ -511,7 +950,7 @@
    "videoId": "kocur-2",
    "title": "Stroke & Spin vs. Stroke & Slip",
    "start": 339,
-   "end": 480,
+   "end": 493,
    "cues": [
     "Fronted tight: fake a hard stroke, chin to chest, whitewater, spin 180° behind the defender.",
     "Separation: skip the spin, slip the inside arm under the armpit and kick through. (Slip at `00:06:33`.)"
@@ -522,6 +961,395 @@
     "center",
     "front",
     "seal",
+    "drill",
+    "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-493",
+   "videoId": "kocur-2",
+   "title": "Squirm Drill (Wide Frame)",
+   "start": 493,
+   "end": 565,
+   "cues": [
+    "The center learns to control and push back his defender: high out of the water, chest line showing, arms sculling to make a wide frame the 2 m defender can't jump around.",
+    "Elbows never go back past the body frame - that is an offensive foul; inside the frame that water is yours.",
+    "Work rate of arms and legs, whitewater everywhere.",
+    "Wider = easier to keep ball side."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "wrestling",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-565",
+   "videoId": "kocur-2",
+   "title": "Relax, Then Squirm on the Entry",
+   "start": 565,
+   "end": 581,
+   "cues": [
+    "Ball not coming in: the center relaxes.",
+    "The moment he knows it is coming he squirms into the defender and establishes dominance at set - and earns the exclusion."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "ejection-draw",
+    "wrestling",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-581",
+   "videoId": "kocur-2",
+   "title": "Squirm Swim Release (Two-Stroke to a Dunk)",
+   "start": 581,
+   "end": 664,
+   "cues": [
+    "The squirm keeps the defender's hips up and creates small separation; the instant you feel it, release into a two-stroke swim for the dry pass and the slam dunk.",
+    "Never push off the defender and reach - show the referee you are swimming away before the ball comes.",
+    "Underwater: legs come up into you, big breaststroke kick starts the separation, two strokes, catch, finish."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "release",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-664",
+   "videoId": "kocur-2",
+   "title": "Squirm to a Quick Shot",
+   "start": 664,
+   "end": 715,
+   "cues": [
+    "Squirm back into the defender, gain the position, release to the ball.",
+    "The defender is worried about getting hit or getting around as the ball is delivered - that is your separation.",
+    "If the shooting arm is free, shoot.",
+    "Don't wait for him to get back on you.",
+    "Quick twitch from squirm to shot beats any 2 m defender."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "shooting",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-715",
+   "videoId": "kocur-2",
+   "title": "Inside Water Shooting Drill",
+   "start": 715,
+   "end": 777,
+   "cues": [
+    "Defender directly on your back, cage in front.",
+    "Squirm first; as the ball comes, a quick shoulder spin creates the distance from defender to ball.",
+    "Head buried in the chest but eyes on the cage.",
+    "Don't expect the call - go forward with the shot.",
+    "From above: the off shoulder and off elbow turn into the defense, the shooting arm is free, the off hand fends him off - a clean, high-percentage shot."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "shooting",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-777",
+   "videoId": "kocur-2",
+   "title": "Strong-Side Corner Turn, Cross-Cage Low",
+   "start": 777,
+   "end": 859,
+   "cues": [
+    "Ball from the 5 or the 1: strong side and corner turn established before the ball arrives, separating to the strong side with the defender on your weak-side arm.",
+    "Leading hand high with the ball to make the goalie rise; best shot is cross-cage low under his arms.",
+    "The off shoulder shields the defender from your shooting arm.",
+    "Legs: split eggbeater, quick hip twist, foundation leg (right for a right-hander) directly under you, step out over it."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "shooting",
+    "cross-cage",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-859",
+   "videoId": "kocur-2",
+   "title": "Weak-Side Quarter Turn: 360 Spin, or Shield and Draw",
+   "start": 859,
+   "end": 949,
+   "cues": [
+    "Right-hander set on the 1-2 side, squirming before the ball comes.",
+    "Quarter turn powered by the split eggbeater into a 360 spin; the arm stays above the head, not out over the defender, so he can't hit it.",
+    "Underwater: the near leg high and horizontal, knee or shin shielding him off - go straight vertical and he jumps on top of the arm.",
+    "Not every set shoots: with position, shield him off with the left arm and shoulder, take the ball right-handed to inside water, and take the 5 m or the exclusion."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "shooting",
+    "ejection-draw",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-949",
+   "videoId": "kocur-2",
+   "title": "Center Offense Recap",
+   "start": 949,
+   "end": 989,
+   "cues": [
+    "Head above water; work rate of legs and arms; split eggbeater - one leg under you as the foundation, the other pushing you back into the defender to hold the 2 m line.",
+    "Own the front court."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "center",
+    "split-eggbeater",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-989",
+   "videoId": "kocur-2",
+   "title": "2m Defense: Control Ball Side for the Whole Clock",
+   "start": 989,
+   "end": 1028,
+   "cues": [
+    "A 2 m defender who controls the game forces the offense into low-percentage post-ups and drives.",
+    "The best center-backs hold ball side for the entire shot clock, or lose it for a split second and take it back with a sharp move."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1028",
+   "videoId": "kocur-2",
+   "title": "Forearm Field Blocking",
+   "start": 1028,
+   "end": 1069,
+   "cues": [
+    "Right forearm on the set, hands elevated to show you aren't grabbing; legs at 45° in the water so you can elevate into a block or steal.",
+    "Game clip: it takes part of the cage away from the shooter and narrows the goalie's job - a higher center block rate."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "block",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1069",
+   "videoId": "kocur-2",
+   "title": "Stroke Release",
+   "start": 1069,
+   "end": 1120,
+   "cues": [
+    "Ball swinging from one triangle to the other: the 2 m defender re-establishes position with one stroke; the leading hand, once positioned, shows and takes away the entry.",
+    "From above he is horizontal with hips away from the set so he can't be grabbed; underwater ~45° so the breaststroke kick keeps contact and control."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "release",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1120",
+   "videoId": "kocur-2",
+   "title": "Two-Stroke Release From the Wrong Side",
+   "start": 1120,
+   "end": 1140,
+   "cues": [
+    "Caught on the wrong side with the ball at the 5: stay and you're in trouble.",
+    "Two-stroke release, swim around, re-establish ball side."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1140",
+   "videoId": "kocur-2",
+   "title": "Push Release to a Jump",
+   "start": 1140,
+   "end": 1193,
+   "cues": [
+    "Push to make distance so the set can't control you; it also makes him react to the lever on his body.",
+    "As he reacts, the 2 m defender jumps around with a big breaststroke kick to establish ball side.",
+    "Outside-hand stroke to get around, then both hands up to show the referee - no pushing, no sinking."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "release",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1193",
+   "videoId": "kocur-2",
+   "title": "Slip Move to the Front; Push Release When the Hips Are Down",
+   "start": 1193,
+   "end": 1266,
+   "cues": [
+    "Slip: from directly behind, a big breaststroke kick maneuvers into a front; it aggravates the set and forces the offensive push.",
+    "Push release: for defenders losing the battle or with hips down - make distance, elevate the hips to horizontal, then breaststroke-kick back onto him to regain ball side.",
+    "Vertical is the bad position for the 2 m defender; the push release gets him horizontal again where he can't be controlled."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "front",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1266",
+   "videoId": "kocur-2",
+   "title": "Armpit / Shoulder Control",
+   "start": 1266,
+   "end": 1345,
+   "cues": [
+    "The first technique taught to center defenders.",
+    "Inside hand controls the set at the armpit; outside hand stays visible for the perimeter; lower back and legs at the surface so there is power to push him further out.",
+    "Moving the arm from one armpit to the other lets you push him and control ball side.",
+    "Show the referee: not on top of him, handling him underneath."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "hand-fighting",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1345",
+   "videoId": "kocur-2",
+   "title": "Save Yourself With the Lap Pull",
+   "start": 1345,
+   "end": 1362,
+   "cues": [
+    "Ball passed in from the 3 / point: the center-back dives inside with a strong lap pull, strokes over, and steals it."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "steal",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-2-1362",
+   "videoId": "kocur-2",
+   "title": "Forearm Control, Hands Off (Advanced)",
+   "start": 1362,
+   "end": 1446,
+   "cues": [
+    "Relies on the legs.",
+    "Forearms on the set's back or shoulders, hands off him - the referee sees you aren't holding, and you don't get excluded.",
+    "Hips and hands from above: the leading hand is free to reach.",
+    "Crossing from side to side: a big explosive breaststroke kick to penetrate - fast twitch is what separates the defender who holds ball side from the one who gets excluded - then straight into a hard eggbeater to hold.",
+    "Push him to the vertical and you can move him outside, past the 2 m line."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "center-d",
+    "hand-fighting",
+    "breaststroke-kick",
     "drill",
     "varsity"
    ],
@@ -743,6 +1571,31 @@
    "hidden": false
   },
   {
+   "id": "kocur-3-460",
+   "videoId": "kocur-3",
+   "title": "Step-Over Release and Step-Back Attack",
+   "start": 460,
+   "end": 563,
+   "cues": [
+    "Step over your hips, across your body, from horizontal to vertical, stepping away to make space: body at 45° in a pivot, releasing back over the back leg into the opposite 45°.",
+    "Then the next step: if the defense stays off in the zone after your release, come across your body and step back over your legs into the attack.",
+    "Your job is to make the defense play you; if they aren't honoring you, make them.",
+    "It's no good setting a triangle if you can't deliver a live entry to set."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "release",
+    "entry",
+    "hip-rotation",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
    "id": "kocur-3-563",
    "videoId": "kocur-3",
    "title": "Stunt Move",
@@ -917,7 +1770,7 @@
    "videoId": "kocur-4",
    "title": "Foul & Crash Drill",
    "start": 415,
-   "end": 470,
+   "end": 487,
    "cues": [
     "Their set has position: foul your man, spin over your hips, swim straight into the 2 m crash lane to double."
    ],
@@ -928,6 +1781,281 @@
     "crash",
     "drop",
     "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-487",
+   "videoId": "kocur-4",
+   "title": "Foul, Lunge, KO",
+   "start": 487,
+   "end": 564,
+   "cues": [
+    "Shoulder control at 45°, looking behind you to see if set needs the foul and help.",
+    "Foul, then the lunge-KO: a breaststroke kick with the arms in shot-blocking position and the intent to knock him down - never give the shooter his shot.",
+    "Rotate over the hips, hips and chest near the surface as the spring for the kick.",
+    "Same movement for the 5, front court, splitting and zones; underwater, the hips get back under to kick out."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "foul-deny",
+    "lunge",
+    "breaststroke-kick",
+    "press",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-564",
+   "videoId": "kocur-4",
+   "title": "Absorb the Push-Off, Lunge Back Out",
+   "start": 564,
+   "end": 601,
+   "cues": [
+    "X5 absorbs the offensive player's push-off with hips up, then lunges back out to foul and protect the 2 m defender - impossible from the vertical, only from the horizontal.",
+    "X4 KO lunge for pressure;",
+    "X3 splitting to the 4 as he moves into his area.",
+    "Powerful and explosive."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "man-down",
+    "lunge",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-601",
+   "videoId": "kocur-4",
+   "title": "Head-In, Feet-Out Lunge (Zone)",
+   "start": 601,
+   "end": 668,
+   "cues": [
+    "Head toward the center of the pool or 2 m, legs facing where you want to go, so you step over your legs to gain ground.",
+    "Swimming out to the guy is slower and less pressure; the lunge up and over the hips with the breaststroke kick gets you there quicker.",
+    "The hand in the water leads and steps out front; the upper body goes to the legs, the legs never drop under."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "drop",
+    "lunge",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-668",
+   "videoId": "kocur-4",
+   "title": "Put Him Down: Hit the Arm, Blocking Hand Up",
+   "start": 668,
+   "end": 748,
+   "cues": [
+    "Never put the player down with the shot-blocking hand - drop it and he shoots over you.",
+    "Blocking hand stays up and takes your side of the cage; the leading hand (the one working underwater) hits the throwing arm at the elbow, not the body - big players absorb a body hit and still shoot.",
+    "One big lunge, head in, feet out.",
+    "X3 example: one hand knocks the ball down, the other blocks."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "block",
+    "lunge",
+    "press",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-748",
+   "videoId": "kocur-4",
+   "title": "Crossover Steal (Vertical)",
+   "start": 748,
+   "end": 824,
+   "cues": [
+    "Late in the game when you need the ball.",
+    "He is vertical, controlling the ball: fake both hands up, then the inside hand goes across his lower or mid back and pulls him into you while the outside hand crosses his body with a big breaststroke kick to the ball.",
+    "Pressure on the shoulder makes him drop and dig for a foul; as he goes under, both hands up, reach up and around, and take it."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "steal",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-824",
+   "videoId": "kocur-4",
+   "title": "Crossover Steal (Horizontal, on the Release)",
+   "start": 824,
+   "end": 866,
+   "cues": [
+    "He is releasing for the ball in a horizontal swim or a two-stroke release: sit back, anticipate the pass.",
+    "His hips are right in front of you - the inside hand strokes over the hips and reaches for the ball.",
+    "It looks like a normal swim stroke, not a pull or drag.",
+    "Disguised, and it works in games."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "steal",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-866",
+   "videoId": "kocur-4",
+   "title": "Perimeter Defense: Hips Up, Kick, Don't Get Grabbed",
+   "start": 866,
+   "end": 906,
+   "cues": [
+    "Control your man and play the chess game: hips up, body protected from the grab, moving in and out by rotating over the hips.",
+    "Breaststroke kick over eggbeater - more powerful, more explosive, quicker to knock somebody down."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "press",
+    "body-position",
+    "breaststroke-kick",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-906",
+   "videoId": "kocur-4",
+   "title": "Forearm Absorb (Driver Defense)",
+   "start": 906,
+   "end": 951,
+   "cues": [
+    "Horizontal, almost a stepping position.",
+    "Forearm on his shoulder, hand off the player - show the referee contact without holding.",
+    "Let him push you back; you are in control.",
+    "Body stays horizontal so when he rears back or receives, the legs are set to breaststroke-kick back on top of him to foul or control."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "press",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-951",
+   "videoId": "kocur-4",
+   "title": "Dropped Hips (Bad Example)",
+   "start": 951,
+   "end": 985,
+   "cues": [
+    "Defender drops his hips vertical: the driver goes left, right or steps away and creates distance, and the defender has to get back horizontal before he can gain ground - a two-step process against a one-step one.",
+    "Keep the hips up."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "body-position",
+    "example-bad",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-985",
+   "videoId": "kocur-4",
+   "title": "Sculling Driver Defense: Don't Take a Stroke",
+   "start": 985,
+   "end": 1061,
+   "cues": [
+    "Scull or step to keep the distance while keeping contact; eyes on the ball, hand on your man.",
+    "The driver takes five to eight strokes; if you can contain him sculling without taking a stroke you are a step ahead and can jump out.",
+    "Take strokes and you commit one direction - he pulls back on his legs, receives, and you are gone.",
+    "Legs and hands, never a swim."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "stepping",
+    "press",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-1061",
+   "videoId": "kocur-4",
+   "title": "Protect Spin",
+   "start": 1061,
+   "end": 1132,
+   "cues": [
+    "He grabs a limb and rotates for inside water: spin out of it and the referee sees you are not the one holding.",
+    "Perimeter defenders get excluded for facing him instead of spinning.",
+    "Hip to hip, never onto the back (that gives him leverage); horizontal, hips at 45°, elbow in contact, both hands out of the water.",
+    "Legs working keeps the hands free; if the legs stop you have nothing but hands, and that gets called."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "hip-rotation",
+    "press",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-4-1132",
+   "videoId": "kocur-4",
+   "title": "Facing the Hold (Bad Example)",
+   "start": 1132,
+   "end": 1154,
+   "cues": [
+    "Struggling through the hold facing the defender with hands down looks like you are holding, and defense is always the one called. \"He grabbed me\" is not a defense - spin out of it."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "driver",
+    "example-bad",
     "all"
    ],
    "images": [],
@@ -1088,7 +2216,7 @@
    "videoId": "kocur-5",
    "title": "Step-In Pass & Shoulder Hitching",
    "start": 327,
-   "end": 420,
+   "end": 421,
    "cues": [
     "Attack the cage with the arm high so the splitter must commit; hitch the shoulders to make the goalie jump; slip the wrist pass to the open shooter."
    ],
@@ -1100,6 +2228,526 @@
     "fake",
     "drill",
     "varsity"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-421",
+   "videoId": "kocur-5",
+   "title": "Hitch Wrist Pass to the Strong Side",
+   "start": 421,
+   "end": 480,
+   "cues": [
+    "Big shoulder hitch, picture the goalie jumping, then at the last second a wrist pass back to the strong side (a lefty at 4-5, or an open right-hander).",
+    "Do it slow or methodical and nobody buys it - aggressive, so the arm is strong and the pass leaves right before the release."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-480",
+   "videoId": "kocur-5",
+   "title": "Receive-and-Fake",
+   "start": 480,
+   "end": 513,
+   "cues": [
+    "Ball arrives cross-face or strong side; shoulder hitch or quick twitch the instant it hits your hand so the goalie sets on you.",
+    "Then pass to the open man, or get the goalie digging on his hands and pick a high corner.",
+    "Be in attack position on arrival, every time."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "fake",
+    "catch-shoot",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-513",
+   "videoId": "kocur-5",
+   "title": "Fake-Twist Pass",
+   "start": 513,
+   "end": 573,
+   "cues": [
+    "Set up the cross-face pass by attacking the cage to shoot; get the goalie's hands out of the water, then follow through the motion with a pass to the weak side for a catch-and-shoot.",
+    "The 5 attacks strong and at the last second twists the core hard without telegraphing; on extra man the same fake-twist to the 4."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "fake",
+    "man-up",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-573",
+   "videoId": "kocur-5",
+   "title": "Overhead Pass Disguised in the Fake",
+   "start": 573,
+   "end": 638,
+   "cues": [
+    "Get blocker, goalie and defense focused on you, then a pass that crosses over your body without turning the shoulders: body faces the cage, the motion goes up, over and across the face.",
+    "The goalie never sees the next pass coming."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-638",
+   "videoId": "kocur-5",
+   "title": "Fake-Out Pass",
+   "start": 638,
+   "end": 728,
+   "cues": [
+    "Attack with a wide fake and the ball comes straight out of the fake to the pass, no hesitation.",
+    "Highly disguised, easy to learn, throws goalies off balance.",
+    "Bonus: dive strong side at the same time so goalie and defense dive with you.",
+    "Offense is chess - whatever your body shows, go the other way at the last second."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "fake",
+    "dive",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-728",
+   "videoId": "kocur-5",
+   "title": "Great Passers Look Like Shooters",
+   "start": 728,
+   "end": 763,
+   "cues": [
+    "What separates a great passer: the defense believes you are the finisher, and the pass comes at the last moment without hesitation or disguise.",
+    "Become the finisher and you become the playmaker."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-763",
+   "videoId": "kocur-5",
+   "title": "Zone Passing: Step Around the Defender to Set",
+   "start": 763,
+   "end": 845,
+   "cues": [
+    "Practice every day.",
+    "Cat-and-mouse: change your lean, step left and come up to pass, step weak side up and around the defender, crossover with the inside hand for a new lane; step strong side is easier - legs set, leading hand already leading, powerful kick.",
+    "Pass around the defense, never through it."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "entry",
+    "stepping",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-845",
+   "videoId": "kocur-5",
+   "title": "Lean and Over-the-Head Pass to Set",
+   "start": 845,
+   "end": 883,
+   "cues": [
+    "Lean strong side, then bring the ball beyond the lean over your head - outside the defender's reach.",
+    "Underwater: body at 45° for a big breaststroke kick to penetrate; leading hand out front as the foundation to fall back on."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "entry",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-883",
+   "videoId": "kocur-5",
+   "title": "Wrist Pass Back to Set",
+   "start": 883,
+   "end": 901,
+   "cues": [
+    "The 5 with body facing the wrong way sees the center inside and wrists it back to set: a man advantage or a 5 m.",
+    "Crafty wrist, nothing telegraphed."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "entry",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-901",
+   "videoId": "kocur-5",
+   "title": "Vertical Overhead and Cat-and-Mouse Wrap Pass to Set",
+   "start": 901,
+   "end": 970,
+   "cues": [
+    "Attack hard to make the defender drop his hands, come low on the fake, then fast-twitch it over his head straight to set - the center has all the time he needs to earn the exclusion or 5 m.",
+    "The wrap: make him lean strong side for the over-the-head, then come back down under his elbow and armpit.",
+    "Same moves as the wrap and overhead shots."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "entry",
+    "fake",
+    "wrap",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-970",
+   "videoId": "kocur-5",
+   "title": "Step Weak Side Before You Receive",
+   "start": 970,
+   "end": 1020,
+   "cues": [
+    "Move one to two yards before the ball arrives: shot or pass to set from a new angle.",
+    "The defender watching the center can't move with you.",
+    "Underwater: horizontal while stepping, quicker in the water.",
+    "Variation: strokes across the body to re-establish the lane, more momentum and speed."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "stepping",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1020",
+   "videoId": "kocur-5",
+   "title": "Dive Strong Side Before You Receive",
+   "start": 1020,
+   "end": 1043,
+   "cues": [
+    "The lefty dives strong side before the ball comes, creating the pass or shot lane; both hands and a big breaststroke kick power him past the defense.",
+    "Advanced: the defender catches up, so one more step and a lean strong side on top of the dive to pass around him."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "dive",
+    "release",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1043",
+   "videoId": "kocur-5",
+   "title": "Zone Passing Summary",
+   "start": 1043,
+   "end": 1086,
+   "cues": [
+    "Fast twitch to out-maneuver the defender; the chess game - show one thing, wrap back or over the head; move before you receive.",
+    "Make them focus on you so another player opens."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1086",
+   "videoId": "kocur-5",
+   "title": "Shooting: Think Like the Goalie",
+   "start": 1086,
+   "end": 1132,
+   "cues": [
+    "Body position, leg position, wrist action, release point.",
+    "The goalie thinks like a shooter; if you only think like a shooter he is a step ahead.",
+    "Watch the players move to new shooting lanes with dives, the breaststroke kick and the leading hand - the thing that takes a player up a level."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1132",
+   "videoId": "kocur-5",
+   "title": "SDL Drill: Swim, Dive, Legs",
+   "start": 1132,
+   "end": 1206,
+   "cues": [
+    "Out of a hard counter or filling a pocket: momentum forward, big breaststroke kick, leading hand out front steering; look around for your open man; then to your legs to pass or shoot.",
+    "Stay horizontal through the dive and only go vertical after you are in the pocket; hips drive up into the body, ribcage out of the water."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "counter",
+    "dive",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1206",
+   "videoId": "kocur-5",
+   "title": "Walk With the Ball",
+   "start": 1206,
+   "end": 1272,
+   "cues": [
+    "Physical drill: keep control of the ball and the defender, stay vertical on your legs, get the shot off without a foul - the referee does not bail you out.",
+    "Non-throwing hand is a bent shield, never a stiff arm.",
+    "Add finishes: quick twitch lean strong side and shoot over the head; or the wrap around the armpit."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "wrestling",
+    "ball-control",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1272",
+   "videoId": "kocur-5",
+   "title": "Wrap Shot and Near-Side Power Shot",
+   "start": 1272,
+   "end": 1340,
+   "cues": [
+    "Wrap: lean ball side, breaststroke kick through past the defender's armpit; the goalie reads cross-cage and you wrap it back near side.",
+    "Near-side power: the arm comes up and over the head, over and around the blocking hand - reach around the defense, never through it.",
+    "When the goalie isn't there and the blocker isn't paying attention, snap it strong side."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "wrap",
+    "near-side",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1340",
+   "videoId": "kocur-5",
+   "title": "Dive Strong Side, Wrist Cross-Cage",
+   "start": 1340,
+   "end": 1411,
+   "cues": [
+    "Dive strong side and shoot hard strong side over the head.",
+    "Then the follow-up: the goalie follows your body to his strong side and at the last second you wrist it back cross-cage.",
+    "Keep the arm over your head, not wide over your body - wide lets goalie and blocker read it.",
+    "Identical motion until the last half second of wrist; disguise the lean."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "dive",
+    "cross-cage",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1411",
+   "videoId": "kocur-5",
+   "title": "Step Weak Side Shooting",
+   "start": 1411,
+   "end": 1467,
+   "cues": [
+    "Move before every shot; the more you move, the more space.",
+    "Step across the body with the leading hand and a big breaststroke kick around the defender - underwater the hand comes out and back in to lead.",
+    "Your defender is eggbeatering; your breaststroke kick is further, more powerful and quicker.",
+    "Eggbeater is for the foundation, not for quickness."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "stepping",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1467",
+   "videoId": "kocur-5",
+   "title": "Wrap Shot Under the Blocker's Armpit",
+   "start": 1467,
+   "end": 1566,
+   "cues": [
+    "Goalies rely on the field blocker for part of the cage; beat the blocker near side and you score at every level.",
+    "Come vertical and high with the arm motion, then wrap back under his armpit - slow it down and you see the opening.",
+    "Works on 6-on-5 and in front-court offense.",
+    "Twist: legs as high as you can, ball kept low - the blocker thinks high and you sweep under his arm.",
+    "Examples from the 6 spot: fake, fake, stay vertical, wrap around the blocker."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "wrap",
+    "near-side",
+    "man-up",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1566",
+   "videoId": "kocur-5",
+   "title": "Overhead Shot",
+   "start": 1566,
+   "end": 1644,
+   "cues": [
+    "The shot not many have the confidence to take.",
+    "See the window over the blocker's cap or ear before you receive - the shot is open on delivery.",
+    "Lean strong side and the blocker feels it; keep the shoulders still and take the arm from over your head to over the defender's head and nobody reads it."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "fake",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1644",
+   "videoId": "kocur-5",
+   "title": "Lean Overhead From the 1 and 6 Spots",
+   "start": 1644,
+   "end": 1684,
+   "cues": [
+    "Lean overhead creates the lane around the blocker; the 1 leans past the X1 defender; the 6 with a quick lean for an easy goal.",
+    "Know where the blocking arm will be before you receive, so the shot is in your mind before the ball is."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "man-up",
+    "wing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-5-1684",
+   "videoId": "kocur-5",
+   "title": "Redirect Shot",
+   "start": 1684,
+   "end": 1779,
+   "cues": [
+    "All levels; master it and you score more.",
+    "The receiving hand never comes back - it pushes the ball forward, redirecting it; the ball is barely in your hand and it beats the goalie before he can react.",
+    "With defense on, it catches them locked up.",
+    "Awareness of cage and goalie; pull the trigger before he expects it; it doesn't have to be hard, just quick."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "catch-shoot",
+    "drill",
+    "all"
    ],
    "images": [],
    "hidden": false
@@ -1312,7 +2960,7 @@
    "videoId": "kocur-6",
    "title": "Left & Right Hip Swings (180° Switches)",
    "start": 383,
-   "end": 470,
+   "end": 423,
    "cues": [
     "Lead foot breaks the surface as the legs tuck tight under the torso; instant 180° redirection without dropping vertical."
    ],
@@ -1320,6 +2968,631 @@
    "tags": [
     "eggbeater",
     "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-423",
+   "videoId": "kocur-6",
+   "title": "Pendulum Swings (Front to Back)",
+   "start": 423,
+   "end": 461,
+   "cues": [
+    "Same rule as the hip swings: bring the knees up into the midsection and the front-to-back transition is quick.",
+    "Bad example underwater: dragging the legs vertical from front to back - slow, and the player said so."
+   ],
+   "notes": "",
+   "tags": [
+    "eggbeater",
+    "body-position",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-461",
+   "videoId": "kocur-6",
+   "title": "Change-of-Direction Drills",
+   "start": 461,
+   "end": 500,
+   "cues": [
+    "Knees up into the body with a hard breaststroke kick to go the opposite way; 5 m each way is enough.",
+    "The arm swing gets the momentum going and the leading hand out front turns the body toward the new direction."
+   ],
+   "notes": "",
+   "tags": [
+    "counter",
+    "breaststroke-kick",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-500",
+   "videoId": "kocur-6",
+   "title": "Stop-and-Go",
+   "start": 500,
+   "end": 555,
+   "cues": [
+    "The sport is stop and go.",
+    "Stop on a dime with legs and arms; the breaststroke kick is what restarts you.",
+    "Stay horizontal, never fully vertical, so the next move is ready.",
+    "Aggressive arm speed sells the drive."
+   ],
+   "notes": "",
+   "tags": [
+    "drive",
+    "fake",
+    "breaststroke-kick",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-555",
+   "videoId": "kocur-6",
+   "title": "Forward Lunge",
+   "start": 555,
+   "end": 596,
+   "cues": [
+    "Note how high the player gets: he is lunging at the shooter and taking away part of the cage at once.",
+    "Advanced: one hand replaces the other without pause, so there is always a hand up and never a clear lane."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "lunge",
+    "block",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-596",
+   "videoId": "kocur-6",
+   "title": "Side Lunges (Splits)",
+   "start": 596,
+   "end": 621,
+   "cues": [
+    "Front-court defense: lunge to stun or knock down a driver.",
+    "The opposite side of the body pushes you - right leg and right arm drive a dive to the left.",
+    "Underwater: legs curl up, then a massive breaststroke kick for the highest reach."
+   ],
+   "notes": "",
+   "tags": [
+    "defense",
+    "lunge",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-621",
+   "videoId": "kocur-6",
+   "title": "Sitting-in-a-Chair Sculling Drill",
+   "start": 621,
+   "end": 667,
+   "cues": [
+    "Core, lower back and shoulders.",
+    "Sit back in the chair with knees and toes above the water, arms sculling in circles to push forward.",
+    "The more you sit up with knees and toes in the air, the better it works."
+   ],
+   "notes": "",
+   "tags": [
+    "core",
+    "eggbeater",
+    "body-position",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-667",
+   "videoId": "kocur-6",
+   "title": "Dribbling: Head Up and Head Down",
+   "start": 667,
+   "end": 713,
+   "cues": [
+    "Arms never touch the ball; they are only a safety guard to push it back in front.",
+    "The ball rides the bow wave in front of your head.",
+    "Do it at 100% - cruise at 60-70% and you lose the ball at game speed."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "counter",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-713",
+   "videoId": "kocur-6",
+   "title": "Change Left and Right With the Ball",
+   "start": 713,
+   "end": 746,
+   "cues": [
+    "Hand under the ball, never on top; move it across underneath with the breaststroke kick and the opposite hand pulling the torso the new way; a strong kick on every direction change.",
+    "Advanced players: grip the ball and do the same."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-746",
+   "videoId": "kocur-6",
+   "title": "Off-Hand Pick-Up",
+   "start": 746,
+   "end": 788,
+   "cues": [
+    "Four or five hard strokes, off hand (left) to strong hand, and elevate horizontal to vertical.",
+    "No hand on top of the ball, no need for big hands.",
+    "Never pass hand to hand in the air; a shovel with both hands touching for a split second is allowed."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "counter",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-788",
+   "videoId": "kocur-6",
+   "title": "Swim to Vertical",
+   "start": 788,
+   "end": 827,
+   "cues": [
+    "Carry the ball on the counter or up the front court straight into a vertical pass.",
+    "Whitewater from arms and legs; the lead leg (left for a right-hander) drives up under the left shoulder - the foundation for height.",
+    "Watch the ribcage come out of the water."
+   ],
+   "notes": "",
+   "tags": [
+    "counter",
+    "ball-control",
+    "passing",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-827",
+   "videoId": "kocur-6",
+   "title": "Vertical to Swim",
+   "start": 827,
+   "end": 859,
+   "cues": [
+    "From a faking or passing position into a swim.",
+    "The breaststroke kick generates the direction; legs come up into you for maximum kick strength.",
+    "Do the drill at 100% and it transfers to the game."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-859",
+   "videoId": "kocur-6",
+   "title": "Reach-Free Pop (Backspin)",
+   "start": 859,
+   "end": 883,
+   "cues": [
+    "European drill: reach, stroke, pop the ball with backspin so it returns to the other hand.",
+    "Ball control and position control at once; the stroking arm and the breaststroke kick work simultaneously."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-883",
+   "videoId": "kocur-6",
+   "title": "Reach-Free Pass to Yourself",
+   "start": 883,
+   "end": 905,
+   "cues": [
+    "Same as the pop but passing to yourself.",
+    "Take a real freestyle stroke and pull water with the breaststroke kick; catch out front and keep the ball alive."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-905",
+   "videoId": "kocur-6",
+   "title": "Back-of-Hand Pass to Yourself",
+   "start": 905,
+   "end": 930,
+   "cues": [
+    "Same drill, pass to yourself off the back of the hand: knuckles down to make a cup.",
+    "Energy still comes from the legs and the breaststroke kick."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-930",
+   "videoId": "kocur-6",
+   "title": "Reach-Back Pass",
+   "start": 930,
+   "end": 953,
+   "cues": [
+    "Backstroke with the eggbeater; one arm stroke with the legs working at the same time, passing the ball hand to hand.",
+    "Keep it low and short - throw it high and you lose body control."
+   ],
+   "notes": "",
+   "tags": [
+    "ball-control",
+    "passing",
+    "eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-953",
+   "videoId": "kocur-6",
+   "title": "Triple Threat / Tripod Position",
+   "start": 953,
+   "end": 1031,
+   "cues": [
+    "Ball up, ready to pass or shoot at any moment; rotate 360 to see every angle.",
+    "Lead hand far out front sculling; one leg directly under you, the other slightly up and pushing forward - that is the shot's power.",
+    "All three limbs separated for balance.",
+    "Air pocket between armpit and water = max height.",
+    "Elbow above the ear; below it strains the shoulder."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "passing",
+    "shooting",
+    "body-position",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1031",
+   "videoId": "kocur-6",
+   "title": "Dive Moves: Creating New Passing Lanes",
+   "start": 1031,
+   "end": 1093,
+   "cues": [
+    "Vertical to horizontal and back, in every direction: strong side, across the body, forward, backward.",
+    "Practiced every day at the university level.",
+    "The off hand leads and initiates the foundation; without it you fall flat and never surface vertical."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "dive",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1093",
+   "videoId": "kocur-6",
+   "title": "Dive, Dive, Throw It Down",
+   "start": 1093,
+   "end": 1117,
+   "cues": [
+    "25 yd: dive, snap the legs back under into the vertical, dive again, then throw the ball down hard as if shooting.",
+    "Knees come up into the midsection on every recovery; the throw-down works lower back and stomach."
+   ],
+   "notes": "",
+   "tags": [
+    "dive",
+    "core",
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1117",
+   "videoId": "kocur-6",
+   "title": "Elbow Control on the Perimeter",
+   "start": 1117,
+   "end": 1181,
+   "cues": [
+    "Face to face, never back to back (no vision of the cage).",
+    "Elbow control gives you control of the defender for a give-and-go or to receive.",
+    "Underwater: both bodies at 45°, pushing into each other - drop the hips and you lose the space.",
+    "Ball held the furthest possible distance from the defender.",
+    "Forearm into the chest is legal while the elbow stays underwater."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "hand-fighting",
+    "ball-control",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1181",
+   "videoId": "kocur-6",
+   "title": "Stiff Arm = Offensive Foul (Bad Example)",
+   "start": 1181,
+   "end": 1254,
+   "cues": [
+    "Extended arm pushing on top of the defender's shoulder is a foul every time - keep the arm bent.",
+    "Back to the defense loses vision, loses ground when you turn to look, and gives the defender equal reach for 50-50 balls.",
+    "Every drill keeps moving; standing vertical is never a drill."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "perimeter",
+    "hand-fighting",
+    "example-bad",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1254",
+   "videoId": "kocur-6",
+   "title": "Soft-Hands Drill",
+   "start": 1254,
+   "end": 1285,
+   "cues": [
+    "Both hands out as paddles, passing among the group; vary who and which hand.",
+    "Works fast hands, reaction, awareness, and the thing nobody trains: being ready to receive right after you pass."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1285",
+   "videoId": "kocur-6",
+   "title": "Wrist Pass",
+   "start": 1285,
+   "end": 1326,
+   "cues": [
+    "Arm as straight as possible and still; over-emphasize the wrist snap.",
+    "Elevate past the ribcage before every pass.",
+    "Quality over quantity - the wrist is the last control on the ball."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1326",
+   "videoId": "kocur-6",
+   "title": "Crunch Drill",
+   "start": 1326,
+   "end": 1376,
+   "cues": [
+    "A pitcher falls forward off the mound; we have no mound, so the stomach throws the ball.",
+    "Above water the arm barely moves - the body throws.",
+    "Energy through the stomach, the arm, the wrist."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "core",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1376",
+   "videoId": "kocur-6",
+   "title": "Cross-Face Passing",
+   "start": 1376,
+   "end": 1434,
+   "cues": [
+    "One of the hardest skills in the game.",
+    "Body faces the player you are passing to, not the one you receive from; fewer steps beats more steps.",
+    "Catch above the forehead, bring it back and release in one fluid motion.",
+    "Elevate as you receive, ready to pass."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "cross-face",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1434",
+   "videoId": "kocur-6",
+   "title": "Pass at Your Max Height",
+   "start": 1434,
+   "end": 1464,
+   "cues": [
+    "Every passing drill: get out of the water as high as possible.",
+    "Pass with shoulders in the water and chin on the surface in practice and that is what you do in the game; body out of the water lets the torso turn fast without resistance."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "body-position",
+    "talk",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1464",
+   "videoId": "kocur-6",
+   "title": "Vertical-Horizontal-Vertical Drill",
+   "start": 1464,
+   "end": 1504,
+   "cues": [
+    "Receive vertical, swim with the ball, back to vertical to pass - like the game.",
+    "The breaststroke kick starts the swim; the lead leg drives up into the chest to bring you back vertical."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "ball-control",
+    "breaststroke-kick",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1504",
+   "videoId": "kocur-6",
+   "title": "Scoop Pass and the Dive Into Open Water",
+   "start": 1504,
+   "end": 1588,
+   "cues": [
+    "Scoop pass while swimming, on the counter or in the front court, with the outside hand.",
+    "The dive: a strong breaststroke kick with the leading hand steering into the open pocket, with or without the ball; receive, dive to open water, elevate, pass.",
+    "Fundamental passing is body positioning - the split eggbeater makes the pass."
+   ],
+   "notes": "",
+   "tags": [
+    "passing",
+    "dive",
+    "counter",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1588",
+   "videoId": "kocur-6",
+   "title": "Leg Up / Step Up Shooting",
+   "start": 1588,
+   "end": 1647,
+   "cues": [
+    "Shooter goes to the highest peak: hands and legs work together, torso out of the water; the higher you get, the harder and quicker the body rotates.",
+    "Underwater: a hard breaststroke kick almost in a split eggbeater, one leg behind, one directly under the leading (left) shoulder.",
+    "Long strong kick drives legs → torso → shoulder → elbow → wrist; ball off the middle finger with backspin for the snap."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "split-eggbeater",
+    "drill",
+    "all"
+   ],
+   "images": [],
+   "hidden": false
+  },
+  {
+   "id": "kocur-6-1647",
+   "videoId": "kocur-6",
+   "title": "Pass, Slide, Catch and Shoot: Keep Moving",
+   "start": 1647,
+   "end": 1684,
+   "cues": [
+    "Stay still and the field blockers hold or block you.",
+    "Pass, then slide to a new shooting lane reading the cage; catch and shoot near side or cross-cage.",
+    "Slide by diving to the strong side around the defender, snap the legs back under, then catch - or crossover with the leading hand."
+   ],
+   "notes": "",
+   "tags": [
+    "offense",
+    "shooting",
+    "dive",
+    "catch-shoot",
     "drill",
     "all"
    ],
