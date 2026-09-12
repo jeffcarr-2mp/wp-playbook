@@ -107,6 +107,10 @@
   button.ts{font-family:var(--mono); font-size:12px; padding:1px 8px; border-radius:999px; border:1px solid var(--home); color:var(--home); background:var(--home-soft)} button.ts.on{background:var(--home); color:#fff}
   .glist .g{display:flex; gap:10px; align-items:baseline; padding:10px 6px; border-top:1px solid var(--line-soft); cursor:pointer} .glist .g:first-child{border-top:0} .glist .g .t{font-weight:600} .glist .g .m{color:var(--muted); font-size:13px}
   .kicker{display:flex; justify-content:space-between; gap:10px; align-items:baseline; flex-wrap:wrap}
+  details.vid{border-top:1px solid var(--line-soft); padding:6px 0} details.vid:first-of-type{border-top:0}
+  details.vid summary{cursor:pointer; list-style:none; display:flex; gap:10px; align-items:baseline; padding:6px 4px} details.vid summary::-webkit-details-marker{display:none}
+  details.vid summary .t{font-weight:600} details.vid summary .m{color:var(--muted); font-size:13px; margin-left:auto; white-space:nowrap} details.vid summary::before{content:'▸'; color:var(--muted); font-size:12px} details.vid[open] summary::before{content:'▾'}
+  .byvid .eyebrow{margin-bottom:6px}
   .plist .p{display:flex; gap:12px; align-items:baseline; padding:10px 6px; border-top:1px solid var(--line-soft); cursor:pointer}
   .plist .p:hover{background:var(--surface-2)}
   .plist .d{font-family:var(--mono); color:var(--muted); font-size:13px}
@@ -261,11 +265,17 @@ function groupCard(g){ const ids=g.clipIds.filter(id=>clip(id)&&(!clip(id).hidde
    ${g.description?`<div class="desc">${md(g.description)}</div>`:''}
    ${coach?editGroupHtml(g):''}
    ${ids.map((id,i)=>clipRow(clip(id),i)).join('')||'<div class="empty">No clips yet.</div>'}</div>`; }
+// every clip, by source and video, in video order - the groups above are curated; this is the whole library
+function byVideoHtml(){ const srcs=D.sources.filter(s=>D.videos.some(v=>v.sourceId===s.id));
+  return srcs.map(src=>{ const vids=D.videos.filter(v=>v.sourceId===src.id).sort((a,b)=>(a.n||0)-(b.n||0)||a.title.localeCompare(b.title));
+    const blocks=vids.map(v=>{ const cs=visibleClips().filter(c=>c.videoId===v.id).sort((a,b)=>a.start-b.start); if(!cs.length) return '';
+      return `<details class="vid" id="v-${esc(v.id)}"><summary><span class="t">${esc(v.title)}</span><span class="m">${cs.length} clips · ${mmss(v.duration)}</span></summary>${v.overview?`<div class="desc small">${esc(v.overview)}</div>`:''}${cs.map((c,i)=>clipRow(c,i,' · '+mmss(c.start))).join('')}</details>`; }).join('');
+    return blocks?`<div class="card byvid" id="src-${esc(src.id)}"><div class="eyebrow">All drills by video</div><h2>${esc(src.title)}</h2><div class="small muted" style="margin-bottom:6px">${esc(src.instructor||'')}${src.channel?' · '+esc(src.channel):''}</div>${blocks}</div>`:''; }).join(''); }
 function render(){ const m=$('#main'); if(!D){ m.innerHTML='<div class="empty">Loading…</div>'; return; }
   if(view==='today'){ const pubs=D.practices.filter(p=>p.published||coach).sort((a,b)=>a.date.localeCompare(b.date)); const next=pubs.find(p=>p.date>=today())||pubs[pubs.length-1];
     m.innerHTML=next?practiceHtml(next,true):'<div class="card"><h2>No practice posted</h2><div class="desc">Check the Library while you wait.</div></div>'; if(coach&&next) wirePracticeEditor(next); }
   else if(view==='library'){ const groups=D.groups.filter(g=>(!g.hidden||coach)&&(level==='all'||(g.level||'all')===level||(g.level||'all')==='all'));
-    m.innerHTML=`<div class="filters">${['all','varsity','jv'].map(l=>`<button class="chip lvl ${level===l?'on':''}" onclick="PB.setLevel('${l}')">${l}</button>`).join('')}<span class="small muted">${visibleClips().length} clips · ${D.groups.length} groups</span></div>`+groups.map(groupCard).join('');
+    m.innerHTML=`<div class="filters">${['all','varsity','jv'].map(l=>`<button class="chip lvl ${level===l?'on':''}" onclick="PB.setLevel('${l}')">${l}</button>`).join('')}<span class="small muted">${visibleClips().length} clips · ${D.groups.length} groups</span></div>`+groups.map(groupCard).join('')+byVideoHtml();
     if(coach) D.groups.forEach(wireGroupEditor); }
   else if(view==='practices'){ const ps=D.practices.filter(p=>p.published||coach).sort((a,b)=>b.date.localeCompare(a.date));
     m.innerHTML=`<div class="card"><h2>Practice plans</h2><div class="plist">${ps.map(p=>`<div class="p" onclick="PB.openPractice('${esc(p.id)}')"><span class="d">${esc(p.date)}</span><span>${esc(p.title)}${p.published?'':' <span class="small warn">(draft)</span>'}</span><span class="muted small" style="margin-left:auto">${p.blocks.length} blocks · ${p.blocks.reduce((a,b)=>a+(+b.minutes||0),0)} min</span></div>`).join('')||'<div class="empty">None yet.</div>'}</div></div>`; }
@@ -400,9 +410,11 @@ function route(){ const h=location.hash.replace(/^#/,''); const params=Object.fr
   else if(params.v){ view=params.v; }
   else if(params.clip){ view=params.v||'library'; }
   else if(params.group){ view='library'; }
+  else if(params.video){ view='library'; }
   navOn(); render();
   if(params.clip&&clip(params.clip)) playClip(params.clip);
-  if(params.group){ setTimeout(()=>{ const el=document.getElementById('g-'+params.group); if(el) el.scrollIntoView(); },50); } }
+  if(params.group){ setTimeout(()=>{ const el=document.getElementById('g-'+params.group); if(el) el.scrollIntoView(); },50); }
+  if(params.video){ setTimeout(()=>{ const el=document.getElementById('v-'+params.video); if(el){ el.open=true; el.scrollIntoView(); } },50); } }
 window.addEventListener('hashchange',()=>{ if(location.hash.startsWith('#coach')||location.hash===''&&coach) return; route(); });
 async function boot(){ try{ if(window.__PLAYBOOK) BASE=window.__PLAYBOOK; else { const r=await fetch('playbook.json',{cache:'no-cache'}); BASE=await r.json(); } }
   catch(e){ $('#main').innerHTML='<div class="card"><h2>Could not load playbook.json</h2><div class="desc">Check the connection and reload.</div></div>'; return; }
